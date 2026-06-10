@@ -100,7 +100,6 @@ heroLines.forEach((el) => {
   }, 2000);
 });
 
-
 // =====================
 // LIGHTBOX
 // =====================
@@ -110,7 +109,9 @@ let lbIndex = 0;
 function openLightbox(imgEl) {
   // Collect all images in the same .project-screenshots container
   const container = imgEl.closest(".project-screenshots");
-  lbImages = container ? Array.from(container.querySelectorAll("img")) : [imgEl];
+  lbImages = container
+    ? Array.from(container.querySelectorAll("img"))
+    : [imgEl];
   lbIndex = lbImages.indexOf(imgEl);
 
   const overlay = document.getElementById("lightboxOverlay");
@@ -156,8 +157,14 @@ document.addEventListener("keydown", (e) => {
   const overlay = document.getElementById("lightboxOverlay");
   if (!overlay.classList.contains("active")) return;
   if (e.key === "Escape") closeLightbox();
-  if (e.key === "ArrowRight") { lbIndex = (lbIndex + 1) % lbImages.length; renderLightbox(); }
-  if (e.key === "ArrowLeft")  { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; renderLightbox(); }
+  if (e.key === "ArrowRight") {
+    lbIndex = (lbIndex + 1) % lbImages.length;
+    renderLightbox();
+  }
+  if (e.key === "ArrowLeft") {
+    lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length;
+    renderLightbox();
+  }
 });
 
 // Make screenshots clickable (cursor style)
