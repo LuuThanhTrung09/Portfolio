@@ -3,490 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lưu Thành Trung Unity Game Programmer</title>
+    <title>Lưu Thành Trung | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio của Lưu Thành Trung — Unity Developer & Front-end Developer. Chọn lĩnh vực bạn muốn khám phá: Unity/C#, Front-end, Back-end."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
-    <!-- NAV -->
-    <nav>
-      <div class="nav-logo">COFFEE.DEV</div>
-      <ul class="nav-links">
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#skills">Kỹ năng</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#workflow">Quy trình</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-      </ul>
-    </nav>
-
-    <!-- HERO -->
-    <section id="hero">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-particles" id="particles"></div>
-      <div class="hero-year-badge">2026</div>
-
-      <div class="hero-status">
-        <span class="status-dot"></span>
-        Unity Game Programmer · FPT Polytechnic · TP.HCM
-      </div>
-
-      <div class="hero-name">
-        <span class="line1">PORTFOLIO</span>
-        <span class="line2">LƯU THÀNH</span>
-        <span class="line3">TRUNG</span>
-      </div>
-
-      <div class="hero-role">// UNITY GAME DEVELOPER 2026</div>
-
-      <p class="hero-desc">
-        Sinh viên năm cuối ngành Lập trình Game — định hướng trở thành Unity
-        Game Programmer, chuyên xây dựng gameplay và các hệ thống cốt lõi trong
-        game 2D.
-      </p>
-
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-          Xem dự án
-        </a>
-        <a href="#contact" class="btn-secondary">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
+    <!-- Reusable hanko (seal stamp) mark, referenced via <use> -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <g id="hanko-mark">
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
             fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-            />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
-          Liên hệ ngay
-        </a>
-      </div>
+            stroke="var(--shu)"
+            stroke-width="3"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="38"
+            fill="none"
+            stroke="var(--shu)"
+            stroke-width="1"
+          />
+          <text x="50" y="35" text-anchor="middle" class="hanko__char">L</text>
+          <text x="50" y="59" text-anchor="middle" class="hanko__char">T</text>
+          <text x="50" y="83" text-anchor="middle" class="hanko__char">T</text>
+          <circle cx="19" cy="21" r="1.4" fill="var(--shu)" opacity=".55" />
+          <circle cx="83" cy="29" r="1" fill="var(--shu)" opacity=".4" />
+          <circle cx="79" cy="76" r="1.6" fill="var(--shu)" opacity=".5" />
+          <circle cx="15" cy="71" r="1.1" fill="var(--shu)" opacity=".45" />
+          <circle cx="52" cy="10" r=".9" fill="var(--shu)" opacity=".4" />
+        </g>
+      </defs>
+    </svg>
 
-      <div class="hero-contacts">
-        <a href="tel:0933060138">📞 0933060138</a>
-        <a href="mailto:trungluu452@gmail.com">✉ trungluu452@gmail.com</a>
+    <!-- Background -->
+    <div class="grid"></div>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#top" class="logo">
+        <svg class="hanko hanko--mini" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#hanko-mark" />
+        </svg>
+        LTT
+      </a>
+
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#selection">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="socials" aria-label="Liên kết mạng xã hội">
+        <!-- TODO: thay bằng link thật của bạn -->
         <a
-          href="https://github.com/LuuThanhTrung09"
+          href="https://github.com/your-username"
           target="_blank"
           rel="noopener"
-          >⌨ github.com/LuuThanhTrung09</a
+          aria-label="GitHub"
         >
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-value">2</span>
-          <span class="stat-label">Dự án hoàn thành</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">3+</span>
-          <span class="stat-label">Năm học Unity</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">2D</span>
-          <span class="stat-label">Game Specialization</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="about-avatar reveal">
-        <div class="avatar-frame">
-          <img
-            src="Pic/ChatGPT Image Jun 3, 2026, 02_49_49 PM.png"
-            alt="Lưu Thành Trung"
-          />
-          <span class="avatar-frame-corner corner-tl"></span>
-          <span class="avatar-frame-corner corner-tr"></span>
-          <span class="avatar-frame-corner corner-bl"></span>
-          <span class="avatar-frame-corner corner-br"></span>
-        </div>
-      </div>
-      <div class="about-right reveal">
-        <div class="section-label">01 · Giới thiệu</div>
-        <div class="section-title">VỀ <span class="highlight">TÔI</span></div>
-        <p>
-          Tôi là Lưu Thành Trung, sinh viên ngành Lập trình Game tại FPT
-          Polytechnic — đang định hướng trở thành Unity Game Programmer. Đam mê
-          phát triển game bằng Unity, đặc biệt là xây dựng gameplay và các hệ
-          thống cốt lõi trong game 2D.
-        </p>
-        <p>
-          Portfolio này tổng hợp các dự án cá nhân và bài tập thực hành giúp rèn
-          luyện kỹ năng lập trình, tư duy thiết kế game và làm việc nhóm hiệu
-          quả.
-        </p>
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="label">Trường</span>
-            <span class="value">FPT Polytechnic</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Ngành</span>
-            <span class="value">Lập trình Game</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Vị trí</span>
-            <span class="value">Unity Programmer</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Địa điểm</span>
-            <span class="value">TP. Hồ Chí Minh</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-label reveal">02 · Kỹ năng kỹ thuật</div>
-      <div class="section-title reveal">
-        KỸ NĂNG <span class="outline">CỐT LÕI</span>
-      </div>
-      <div class="neon-divider reveal"></div>
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <span class="skill-icon">🎮</span>
-          <div class="skill-num">01</div>
-          <span class="skill-tag">Primary</span>
-          <h3>Unity Engine & C#</h3>
-          <p>
-            Thành thạo Unity Engine, lập trình C# cho gameplay và cơ chế game 2D
-            platform. Thiết kế cơ chế chạy, nhảy, va chạm và tăng độ khó động.
-          </p>
-        </div>
-        <div class="skill-card reveal">
-          <span class="skill-icon">🔗</span>
-          <div class="skill-num">02</div>
-          <span class="skill-tag">Collaboration</span>
-          <h3>Git & Animation</h3>
-          <p>
-            Quản lý source code và làm việc nhóm hiệu quả với Git. Kiến thức về
-            animation nhân vật và quản lý tài nguyên game trong Unity.
-          </p>
-        </div>
-        <div class="skill-card reveal">
-          <span class="skill-icon">🗺️</span>
-          <div class="skill-num">03</div>
-          <span class="skill-tag">Design</span>
-          <h3>Level & Sound Design</h3>
-          <p>
-            Thiết kế bản đồ (level design) cho nhiều khu vực game. Xây dựng hệ
-            thống âm thanh hoàn chỉnh: sound effects, background music, spatial
-            audio.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-label reveal">03 · Dự án</div>
-      <div class="section-title reveal">
-        DỰ ÁN <span class="highlight">NỔI BẬT</span>
-      </div>
-      <div class="neon-divider reveal"></div>
-
-      <div class="project-item reveal">
-        <span class="project-dim-tag tag-2d">2D</span>
-        <div class="project-num">01</div>
-        <div class="project-info">
-          <span class="type-badge">Dự án cá nhân</span>
-          <span class="date">06/2025</span>
-          <h2>DRAGON WALK</h2>
-          <p class="project-desc">
-            Game 2D Endless Runner phong cách Chrome Dino với nhân vật chính là
-            Rồng. Solo Developer — quản lý toàn bộ quy trình từ concept đến sản
-            phẩm playable. Lập trình cơ chế chạy, nhảy, va chạm, tăng độ khó
-            theo thời gian, thiết kế map vô tận, animation nhân vật và hệ thống
-            âm thanh hoàn chỉnh.
-          </p>
-        </div>
-        <div class="project-tags">
-          <span>Unity</span>
-          <span>C#</span>
-          <span>2D Endless Runner</span>
-          <span>Solo Dev</span>
-          <span>Animation</span>
-          <span>Sound Design</span>
-        </div>
-        <div class="project-screenshots" style="grid-column: 1 / -1">
-          <img
-            src="Pic/Screenshot 2026-05-28 192822.png"
-            alt="Dragon Walk - Screenshot 1"
-            onclick="openLightbox(this)"
-          />
-          <img
-            src="Pic/Screenshot 2026-05-30 220434.png"
-            alt="Dragon Walk - Screenshot 2"
-            onclick="openLightbox(this)"
-          />
-        </div>
-      </div>
-
-      <div class="project-item reveal">
-        <span class="project-dim-tag tag-2d">2D</span>
-        <div class="project-num">02</div>
-        <div class="project-info">
-          <span class="type-badge">Dự án nhóm</span>
-          <span class="date">22/10/2025 – 10/12/2025</span>
-          <h2>SWORD AND MAGIC:<br />CELINA'S STORY</h2>
-          <p class="project-desc">
-            Game 2D platform phát triển theo nhóm. Vai trò: Map Designer và
-            Sound System Developer. Thiết kế bản đồ nhiều khu vực, tích hợp hệ
-            thống âm thanh hoàn chỉnh (sound effects, background music, spatial
-            audio). Làm việc nhóm với Unity và Git.
-          </p>
-        </div>
-        <div class="project-tags">
-          <span>Unity</span>
-          <span>C#</span>
-          <span>2D Platform</span>
-          <span>Team Project</span>
-          <span>Map Design</span>
-          <span>Spatial Audio</span>
-          <span>Git</span>
-        </div>
-        <div class="project-screenshots" style="grid-column: 1 / -1">
-          <img
-            src="Pic/Screenshot 2026-05-28 191901.png"
-            alt="Sword and Magic - Screenshot 1"
-            onclick="openLightbox(this)"
-          />
-          <img
-            src="Pic/Screenshot 2026-05-28 191816.png"
-            alt="Sword and Magic - Screenshot 2"
-            onclick="openLightbox(this)"
-          />
-          <img
-            src="Pic/Screenshot 2026-05-28 191648.png"
-            alt="Sword and Magic - Screenshot 3"
-            onclick="openLightbox(this)"
-          />
-        </div>
-      </div>
-
-      <div class="project-item reveal">
-        <span class="project-dim-tag tag-3d">3D</span>
-        <div class="project-num">03</div>
-        <div class="project-info">
-          <span class="type-badge">Dự án nhóm</span>
-          <span class="date">05/2026 – 07/2026</span>
-          <h2>UNLIMITED SPEED</h2>
-          <p class="project-desc">
-            Game đua xe 3D phát triển tại Unlimited Speed. Vai trò: Game
-            Developer — chịu trách nhiệm toàn bộ hệ thống âm thanh của dự án.
-            Thiết kế và triển khai SFX cho các trạng thái vận hành như Idle,
-            Acceleration, Braking, Drifting và Collision. Thiết lập âm thanh 3D
-            và Audio Mixer trong Unity để tăng tính nhập vai cho người chơi.
-            Điều chỉnh và tối ưu hiệu suất âm thanh phù hợp với nhiều tình huống
-            gameplay. Hỗ trợ kiểm thử và tinh chỉnh trải nghiệm âm thanh trong
-            suốt quá trình phát triển dự án.
-          </p>
-        </div>
-        <div class="project-tags">
-          <span>Unity</span>
-          <span>C#</span>
-          <span>3D Racing</span>
-          <span>Audio Mixer</span>
-          <span>SFX Design</span>
-          <span>Spatial Audio</span>
-          <span>Team Project</span>
-        </div>
-        <div class="project-screenshots" style="grid-column: 1 / -1">
-          <img
-            src="Pic/Screenshot 2026-06-04 111629.png"
-            alt="Unlimited Speed - Screenshot 1"
-            onclick="openLightbox(this)"
-          />
-          <img
-            src="Pic/Screenshot 2026-06-04 111433.png"
-            alt="Unlimited Speed - Screenshot 2"
-            onclick="openLightbox(this)"
-          />
-          <img
-            src="Pic/Screenshot 2026-06-04 112532.png"
-            alt="Unlimited Speed - Screenshot 3"
-            onclick="openLightbox(this)"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- WORKFLOW -->
-    <section id="workflow">
-      <div class="section-label reveal">04 · Quy trình làm việc</div>
-      <div class="section-title reveal">
-        QUY TRÌNH <span class="outline">LÀM VIỆC</span>
-      </div>
-      <div class="neon-divider reveal"></div>
-      <div class="workflow-steps">
-        <div class="step reveal" data-num="1">
-          <div class="step-num-badge">01</div>
-          <h3>Phát triển Agile</h3>
-          <p>
-            Lặp đi lặp lại để cải tiến sản phẩm nhanh chóng, chia nhỏ công việc
-            thành sprint ngắn, linh hoạt thay đổi theo feedback.
-          </p>
-        </div>
-        <div class="step reveal" data-num="2">
-          <div class="step-num-badge">02</div>
-          <h3>Code Sạch & Modular</h3>
-          <p>
-            Tập trung vào code dễ bảo trì, modular hóa hệ thống game, áp dụng
-            design patterns phù hợp với Unity.
-          </p>
-        </div>
-        <div class="step reveal" data-num="3">
-          <div class="step-num-badge">03</div>
-          <h3>Kiểm thử & Sửa lỗi</h3>
-          <p>
-            Kiểm thử thường xuyên các cơ chế gameplay, sửa lỗi kịp thời, đảm bảo
-            chất lượng sản phẩm qua từng iteration.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOOLS -->
-    <section id="tools">
-      <div class="section-label reveal">05 · Công cụ & Công nghệ</div>
-      <div class="section-title reveal">
-        TECH <span class="highlight">STACK</span>
-      </div>
-      <div class="neon-divider reveal"></div>
-      <div class="tools-list">
-        <div class="tool-item reveal">
-          <div class="tool-role">Chính</div>
-          <div class="tool-name">Unity Editor & C#</div>
-          <div class="tool-desc">
-            Môi trường phát triển chính cho game 2D platform. Sử dụng C#
-            scripting để lập trình gameplay, cơ chế nhân vật và hệ thống game.
-          </div>
-        </div>
-        <div class="tool-item reveal">
-          <div class="tool-role">Phối hợp</div>
-          <div class="tool-name">Git & Visual Studio</div>
-          <div class="tool-desc">
-            Quản lý source code và phối hợp nhóm với Git. Visual Studio là IDE
-            chính để viết C# sạch và dễ bảo trì.
-          </div>
-        </div>
-        <div class="tool-item reveal">
-          <div class="tool-role">Hỗ trợ</div>
-          <div class="tool-name">Audacity & Unity Audio</div>
-          <div class="tool-desc">
-            Chỉnh sửa và tích hợp sound effects, background music và spatial
-            audio. Xây dựng hệ thống âm thanh chuyên nghiệp.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="contact-bg"></div>
-      <div class="contact-decoration">
-        <span class="c1"></span>
-        <span class="c2"></span>
-        <span class="c3"></span>
-        <span class="c4"></span>
-      </div>
-      <span class="contact-label reveal">// Mời kết nối</span>
-      <div class="contact-title reveal">
-        CẢM ƠN<br /><span class="outline-text">BẠN ĐÃ XEM</span><br /><span
-          >PORTFOLIO!</span
-        >
-      </div>
-      <div class="contact-links reveal">
-        <a href="tel:0933060138" class="contact-link">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" width="18" height="18">
             <path
-              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.2 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91A16 16 0 0016.08 17l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0124 18z"
+              fill="currentColor"
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.02 1.76 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
             />
           </svg>
-          0933060138
-        </a>
-        <a href="mailto:trungluu452@gmail.com" class="contact-link">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-            />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
-          trungluu452@gmail.com
         </a>
         <a
-          href="https://github.com/LuuThanhTrung09"
+          href="https://linkedin.com/in/your-username"
           target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
+          rel="noopener"
+          aria-label="LinkedIn"
         >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" width="18" height="18">
             <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
+              fill="currentColor"
+              d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"
             />
           </svg>
-          github.com/LuuThanhTrung09
+        </a>
+        <a href="mailto:your.email@example.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path
+              fill="currentColor"
+              d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm18.4 2H3.6l8.4 6.3L20.4 6ZM3 8.1V18h18V8.1l-8.4 6.3a1 1 0 0 1-1.2 0L3 8.1Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__main">
+        <span class="eyebrow">Welcome to my portfolio</span>
+
+        <h1 class="hero__name">LƯU THÀNH TRUNG</h1>
+
+        <p class="hero__role">
+          Unity Developer · Front-end &amp; Back-end Developer
+        </p>
+
+        <div class="line"></div>
+
+        <p class="description">
+          Xin chào.
+          <br /><br />
+          Cảm ơn bạn đã ghé thăm Portfolio của tôi.
+          <br />
+          Hãy chọn lĩnh vực mà bạn muốn khám phá.
+        </p>
+
+        <a href="#selection" class="scroll-cue"
+          >Xem danh mục <span class="arrow">↓</span></a
+        >
+      </div>
+
+      <div class="hero__mark" aria-hidden="true">
+        <span class="jp-vertical">一期一会</span>
+        <svg class="hanko hanko--lg" viewBox="0 0 100 100">
+          <use href="#hanko-mark" />
+        </svg>
+        <p class="jp-caption">ichigo ichie<br />“một lần gặp, một cơ duyên”</p>
+      </div>
+    </section>
+
+    <!-- Selection -->
+    <section class="selection" id="selection">
+      <div class="selection__head">
+        <span class="eyebrow">Specialization</span>
+        <h2>Chọn lĩnh vực bạn muốn khám phá</h2>
+      </div>
+
+      <div class="selection__grid">
+        <a href="unity/index.html" class="card">
+          <span class="index">01</span>
+          <h3>Unity / C#</h3>
+          <p class="role">Game Development</p>
+          <ul class="tags">
+            <li>Unity Engine</li>
+            <li>C# Programming</li>
+            <li>2D &amp; 3D Game</li>
+            <li>Gameplay System</li>
+          </ul>
+          <span class="button">Explore <span class="arrow">→</span></span>
+        </a>
+
+        <a href="frontend/index.html" class="card">
+          <span class="index">02</span>
+          <h3>Front-end</h3>
+          <p class="role">Web Development</p>
+          <ul class="tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+          </ul>
+          <span class="button">Explore <span class="arrow">→</span></span>
+        </a>
+
+        <a href="backend/index.html" class="card">
+          <span class="index">03</span>
+          <h3>Back-end</h3>
+          <p class="role">Back-end Development</p>
+          <ul class="tags">
+            <li>.NET</li>
+            <li>C#</li>
+            <li>SQL</li>
+          </ul>
+          <span class="button">Explore <span class="arrow">→</span></span>
         </a>
       </div>
     </section>
 
-    <footer>
-      <p>© 2026 Lưu Thành Trung</p>
-      <p>Unity Game Programmer · FPT Polytechnic</p>
-    </footer>
-
-    <!-- LIGHTBOX -->
-    <div
-      class="lightbox-overlay"
-      id="lightboxOverlay"
-      onclick="closeLightbox()"
-    >
-      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-      <button class="lightbox-prev" onclick="lightboxNav(-1, event)">
-        &#8249;
-      </button>
-      <button class="lightbox-next" onclick="lightboxNav(1, event)">
-        &#8250;
-      </button>
-      <div class="lightbox-content" onclick="event.stopPropagation()">
-        <img id="lightboxImg" src="" alt="" />
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-        <div class="lightbox-counter" id="lightboxCounter"></div>
+    <footer id="contact">
+      <div class="footer__mark">
+        <svg class="hanko hanko--sm" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#hanko-mark" />
+        </svg>
+        <p>Designed &amp; developed by <strong>Lưu Thành Trung</strong></p>
       </div>
-    </div>
+
+      <div class="footer__socials">
+        <!-- TODO: thay bằng link thật của bạn -->
+        <a
+          href="https://github.com/your-username"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        <a
+          href="https://linkedin.com/in/your-username"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+        <a href="mailto:your.email@example.com">Email</a>
+      </div>
+
+      <p class="footer__copy">© <span id="year">2026</span> Lưu Thành Trung</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
