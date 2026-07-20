@@ -1,0 +1,346 @@
+/* ===============================
+   Unity / C# — page-specific styles
+   Reuses tokens & components from ../style.css
+   =============================== */
+
+.back-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sumi);
+  text-decoration: none;
+  margin-bottom: 22px;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: var(--shu);
+}
+
+/* ===============================
+   Page intro
+   =============================== */
+
+.specialty-hero {
+  padding: 150px 8% 20px;
+}
+
+.specialty-hero__title {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+}
+
+.specialty-hero__role {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--sumi);
+}
+
+.specialty-hero .line {
+  margin: 32px 0 0;
+}
+
+/* ===============================
+   Projects
+   =============================== */
+
+.projects {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 8% 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 32px;
+  padding: 58px 0;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.project:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.project__index {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--shu);
+  padding-top: 4px;
+}
+
+.project__head {
+  margin-bottom: 28px;
+}
+
+.project__head h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.project__tag {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--sumi);
+}
+
+.project__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.project__meta dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sumi);
+  margin-bottom: 4px;
+}
+
+.project__meta dd {
+  font-size: 15px;
+}
+
+.field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sumi);
+  margin-bottom: 14px;
+}
+
+.project__desc {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.project__desc ul {
+  padding-left: 20px;
+}
+
+.project__desc li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.project__desc li::marker {
+  color: var(--shu);
+}
+
+.project__sublist {
+  margin-top: 8px;
+  padding-left: 18px;
+}
+
+.project__sublist li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--sumi);
+}
+
+.project__rating {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.project__rating .field-label {
+  margin-bottom: 0;
+}
+
+.rating-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--shu);
+}
+
+/* ===============================
+   Gallery
+   =============================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 220px));
+  gap: 16px;
+}
+
+.gallery--4 {
+  grid-template-columns: repeat(4, minmax(0, 220px));
+}
+
+.gallery__slot {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--line);
+  background: var(--paper-deep);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--sumi);
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.gallery__slot:hover {
+  border-color: var(--shu);
+  color: var(--shu);
+}
+
+.gallery__slot input {
+  display: none;
+}
+
+.gallery__plus {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.gallery__text {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.gallery__slot.has-image {
+  border-style: solid;
+  border-color: var(--line);
+  padding: 0;
+}
+
+.gallery__slot.has-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__slot.has-image .gallery__plus,
+.gallery__slot.has-image .gallery__text {
+  display: none;
+}
+
+.gallery__slot.has-image::after {
+  content: "Xem";
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 6px 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(23, 22, 19, 0.6);
+  color: var(--paper);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery__slot.has-image:hover::after {
+  opacity: 1;
+}
+
+/* ===============================
+   Lightbox
+   =============================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 22, 19, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 40px;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--paper);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.lightbox__close:hover {
+  border-color: var(--shu);
+  color: var(--shu);
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+
+@media (max-width: 900px) {
+  .specialty-hero__title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .project__index {
+    padding-top: 0;
+  }
+
+  .gallery,
+  .gallery--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project {
+    opacity: 1;
+    transform: none;
+  }
+}
