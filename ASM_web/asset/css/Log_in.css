@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/Images/responsive-coffee-website-html-and-css-images/images/photo-1495474472287-4d71bcdd2085.jpg")
+  background: url("../Images/responsive-coffee-website-html-and-css-images/images/photo-1495474472287-4d71bcdd2085.jpg")
     center/cover no-repeat;
   position: relative;
 }
