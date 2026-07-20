@@ -191,63 +191,27 @@
 
 .gallery__slot {
   position: relative;
+  display: block;
   aspect-ratio: 4 / 3;
-  border: 1px dashed var(--line);
+  border: 1px solid var(--line);
   background: var(--paper-deep);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  cursor: pointer;
-  color: var(--sumi);
   overflow: hidden;
-  transition:
-    border-color 0.3s ease,
-    color 0.3s ease;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
 .gallery__slot:hover {
   border-color: var(--shu);
-  color: var(--shu);
 }
 
-.gallery__slot input {
-  display: none;
-}
-
-.gallery__plus {
-  font-family: var(--font-display);
-  font-size: 22px;
-  line-height: 1;
-}
-
-.gallery__text {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.gallery__slot.has-image {
-  border-style: solid;
-  border-color: var(--line);
-  padding: 0;
-}
-
-.gallery__slot.has-image img {
+.gallery__slot img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.gallery__slot.has-image .gallery__plus,
-.gallery__slot.has-image .gallery__text {
-  display: none;
-}
-
-.gallery__slot.has-image::after {
+.gallery__slot::after {
   content: "Xem";
   position: absolute;
   inset: auto 0 0 0;
@@ -263,7 +227,7 @@
   transition: opacity 0.3s ease;
 }
 
-.gallery__slot.has-image:hover::after {
+.gallery__slot:hover::after {
   opacity: 1;
 }
 
