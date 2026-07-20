@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Fuji Cafe</title>
+    <link rel="stylesheet" href="../asset/css/root.css" />
+    <link rel="stylesheet" href="../asset/css/header.css" />
+    <link rel="stylesheet" href="../asset/css/Menu.css" />
+    <link rel="stylesheet" href="../asset/css/footer.css" />
+    <link rel="stylesheet" href="../asset/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="decoration decoration-1"></div>
+    <div class="decoration decoration-2"></div>
+
+    <header>
+      <nav class="navbar section-content">
+        <a href="/Funny/FujiCafe.html" class="nav-logo">
+          <h2 class="logo-text">富士喫茶 | Fuji Cafe</h2>
+        </a>
+        <button
+          id="menu-close-button"
+          class="fas fa-times"
+          title="Close menu"
+        ></button>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/Funny/FujiCafe.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/About/about.html" class="nav-link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/Menu/Menu.html" class="nav-link nav-link-active">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Contact/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Log_in/Log_in.html" class="nav-link">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Cart/Cart.html" class="nav-link nav-link-cart">
+              Giỏ hàng
+              <span id="cart-badge" class="cart-badge cart-badge-hidden"
+                >0</span
+              >
+            </a>
+          </li>
+        </ul>
+        <!-- <div class="nav-blank"></div> -->
+        <button
+          id="menu-open-button"
+          class="fas fa-bars"
+          title="Open menu"
+        ></button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Menu</h1>
+        <p>Thực đơn tinh tế từ trái tim Nhật Bản</p>
+      </div>
+    </section>
+
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">
+        Tất cả
+        <span class="filter-count">18</span>
+      </button>
+      <button class="filter-btn" data-filter="coffee">
+        Cà Phê
+        <span class="filter-count">6</span>
+      </button>
+      <button class="filter-btn" data-filter="drinks">
+        Đồ Uống & Khác
+        <span class="filter-count">6</span>
+      </button>
+      <button class="filter-btn" data-filter="pastries">
+        Bánh Ngọt
+        <span class="filter-count">6</span>
+      </button>
+      <button class="filter-btn" data-filter="popular">
+        ⭐ Phổ Biến
+        <span class="filter-count">6</span>
+      </button>
+      <button class="filter-btn" data-filter="new">
+        🆕 Mới
+        <span class="filter-count">3</span>
+      </button>
+    </div>
+
+    <div class="menu-container">
+      <!-- Coffee Section -->
+      <div class="menu-section" data-category="coffee">
+        <div class="section-header">
+          <h2 class="section-title">
+            コーヒー
+            <span class="section-title-en">Coffee</span>
+          </h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Cà Phê Đen</h3>
+                <p class="item-name-en">Black Coffee</p>
+              </div>
+              <span class="item-price">25.000₫</span>
+            </div>
+            <p class="item-description">
+              Hạt cà phê Arabica nguyên chất, rang vừa, mang hương vị đậm đà và
+              tinh tế của cà phê Nhật Bản truyền thống.
+            </p>
+            <span class="item-badge popular">Phổ biến</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Cà Phê Sữa</h3>
+                <p class="item-name-en">Milk Coffee</p>
+              </div>
+              <span class="item-price">29.000₫</span>
+            </div>
+            <p class="item-description">
+              Sự kết hợp hoàn hảo giữa espresso đậm đà và sữa tươi mịn màng, tạo
+              nên vị cà phê êm dịu và thơm ngon.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Cappuccino</h3>
+                <p class="item-name-en">Cappuccino</p>
+              </div>
+              <span class="item-price">55.000₫</span>
+            </div>
+            <p class="item-description">
+              Espresso cân bằng với lớp sữa hấp mịn và bọt sữa mềm, trang trí
+              tinh tế theo phong cách latte art Nhật Bản.
+            </p>
+            <span class="item-badge popular">Phổ biến</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Cà Phê Latte</h3>
+                <p class="item-name-en">Caffè Latte</p>
+              </div>
+              <span class="item-price">59.000₫</span>
+            </div>
+            <p class="item-description">
+              Espresso đậm đà hòa quyện với nhiều sữa tươi, mang lại hương vị
+              mềm mại và cân bằng.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Matcha Latte</h3>
+                <p class="item-name-en">Green Tea Latte</p>
+              </div>
+              <span class="item-price">50.000₫</span>
+            </div>
+            <p class="item-description">
+              Bột matcha cao cấp từ Uji, Kyoto pha với sữa tươi nóng, mang hương
+              vị trà xanh thanh mát đặc trưng.
+            </p>
+            <span class="item-badge new">Mới</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Espresso</h3>
+                <p class="item-name-en">Espresso</p>
+              </div>
+              <span class="item-price">40.000₫</span>
+            </div>
+            <p class="item-description">
+              Ly espresso tinh túy, chiết xuất hoàn hảo với lớp crema vàng óng,
+              đậm đà và sâu lắng.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drinks & Desserts Section -->
+      <div class="menu-section" data-category="drinks">
+        <div class="section-header">
+          <h2 class="section-title">
+            飲み物とデザート
+            <span class="section-title-en">Drinks & More</span>
+          </h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Cookie Bơ</h3>
+                <p class="item-name-en">Butter Cookies</p>
+              </div>
+              <span class="item-price">35.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh quy bơ giòn tan, làm tươi mỗi ngày với công thức truyền thống
+              Nhật Bản, thơm ngậy và béo ngọt.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Chocolate Nóng</h3>
+                <p class="item-name-en">Hot Chocolate</p>
+              </div>
+              <span class="item-price">55.000₫</span>
+            </div>
+            <p class="item-description">
+              Sô-cô-la đen Bỉ cao cấp pha chế với sữa tươi nóng, đậm đà và quyến
+              rũ, hoàn hảo cho ngày lạnh.
+            </p>
+            <span class="item-badge popular">Phổ biến</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Trà Hoa Anh Đào</h3>
+                <p class="item-name-en">Sakura Tea</p>
+              </div>
+              <span class="item-price">50.000₫</span>
+            </div>
+            <p class="item-description">
+              Trà hoa anh đào Nhật Bản, hương thơm dịu nhẹ và vị ngọt thanh tao,
+              mang cảm giác mùa xuân.
+            </p>
+            <span class="item-badge new">Mới</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Yuzu Soda</h3>
+                <p class="item-name-en">Yuzu Sparkling</p>
+              </div>
+              <span class="item-price">45.000₫</span>
+            </div>
+            <p class="item-description">
+              Nước soda tươi mát với vị yuzu chua ngọt đặc trưng, giải nhiệt
+              tuyệt vời cho mùa hè.
+            </p>
+            <span class="item-badge popular">Phổ biến</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Hojicha Latte</h3>
+                <p class="item-name-en">Roasted Tea Latte</p>
+              </div>
+              <span class="item-price">58.000₫</span>
+            </div>
+            <p class="item-description">
+              Trà rang Nhật Bản với hương thơm bùi béo, pha cùng sữa tươi, mang
+              lại cảm giác ấm áp và dễ chịu.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Cookie Cream</h3>
+                <p class="item-name-en">Cookie Cream</p>
+              </div>
+              <span class="item-price">35.000₫</span>
+            </div>
+            <p class="item-description">
+              Thức uống kem mát lạnh với bánh quy Oreo nghiền nhỏ, kem tươi béo
+              ngậy và sốt chocolate, tạo nên sự kết hợp hoàn hảo giữa giòn và
+              mịn.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pastries Section -->
+      <div class="menu-section" data-category="pastries">
+        <div class="section-header">
+          <h2 class="section-title">
+            ペストリー
+            <span class="section-title-en">Pastries</span>
+          </h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Tiramisu</h3>
+                <p class="item-name-en">Classic Tiramisu</p>
+              </div>
+              <span class="item-price">45.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh tiramisu Ý truyền thống với lớp mascarpone mịn màng, bánh
+              ladyfinger thấm cà phê espresso và bột ca cao.
+            </p>
+            <span class="item-badge popular">Phổ biến</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Matcha Cheesecake</h3>
+                <p class="item-name-en">Green Tea Cheesecake</p>
+              </div>
+              <span class="item-price">50.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh phô mai matcha mềm mịn, kết hợp vị béo ngậy của cream cheese
+              với hương trà xanh thanh tao.
+            </p>
+            <span class="item-badge new">Mới</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Castella Cake</h3>
+                <p class="item-name-en">Japanese Sponge Cake</p>
+              </div>
+              <span class="item-price">55.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh bông lan Nhật Bản truyền thống, xốp mịn, ngọt dịu, với hương
+              vị mật ong và trứng tươi.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Dorayaki</h3>
+                <p class="item-name-en">Red Bean Pancake</p>
+              </div>
+              <span class="item-price">45.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh rán truyền thống Nhật Bản nhân đậu đỏ ngọt, mềm mịn và thơm
+              ngon, được yêu thích từ nhiều thế hệ.
+            </p>
+            <span class="item-badge popular">Phổ biến</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Strawberry Shortcake</h3>
+                <p class="item-name-en">Fresh Strawberry Cake</p>
+              </div>
+              <span class="item-price">48.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh gato dâu tây Nhật Bản với lớp bánh bông lan xốp, kem tươi nhẹ
+              và dâu tây tươi ngon.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-header">
+              <div>
+                <h3 class="item-name">Mille Crêpes</h3>
+                <p class="item-name-en">Layered Crepe Cake</p>
+              </div>
+              <span class="item-price">45.000₫</span>
+            </div>
+            <p class="item-description">
+              Bánh crêpe ngàn lớp tinh tế, xếp chồng từ 20 lớp bánh mỏng với kem
+              tươi, mềm mịn tan chảy.
+            </p>
+            <span class="item-badge new">Mới</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">© 2026 富士喫茶 | Fuji Cafe</p>
+        <div class="social-link-list">
+          <a href="#" class="social-link" title="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="social-link" title="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link" title="Twitter"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+        <p class="policy-text">
+          <a href="#" class="policy-link">Privacy policy</a>
+          <span class="separator">•</span>
+          <a href="#" class="policy-link">Refound policy</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">✕</button>
+
+        <div class="modal-body">
+          <div class="modal-left">
+            <div class="modal-image-main">
+              <img id="modal-img" src="" alt="" />
+            </div>
+            <div class="modal-image-thumb">
+              <img id="modal-thumb" src="" alt="" />
+            </div>
+          </div>
+
+          <div class="modal-right">
+            <h2 id="modal-title" class="modal-title"></h2>
+            <p id="modal-price" class="modal-price">0₫</p>
+            <p id="modal-description" class="modal-description"></p>
+
+            <div class="size-selection">
+              <h3 class="selection-title">Chọn size (bắt buộc):</h3>
+              <div class="size-options">
+                <label class="size-option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="Nhỏ"
+                    data-price="0"
+                    checked
+                  />
+                  <span class="size-label">
+                    <span class="size-icon">☕</span>
+                    <span class="size-info">
+                      <span class="size-name">Nhỏ</span>
+                      <span class="size-price">+ 0₫</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="size-option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="Vừa"
+                    data-price="10000"
+                  />
+                  <span class="size-label">
+                    <span class="size-icon">☕</span>
+                    <span class="size-info">
+                      <span class="size-name">Vừa</span>
+                      <span class="size-price">+ 10.000₫</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="size-option">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="Lớn"
+                    data-price="20000"
+                  />
+                  <span class="size-label">
+                    <span class="size-icon">☕</span>
+                    <span class="size-info">
+                      <span class="size-name">Lớn</span>
+                      <span class="size-price">+ 20.000₫</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <a href="/Cart/Cart.html" class="order-btn">
+              <span class="btn-text">ĐẶT HÀNG</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Cart Confirm Dialog -->
+    <div id="cart-confirm" class="cart-confirm-overlay">
+      <div class="cart-confirm-backdrop" id="cart-confirm-backdrop"></div>
+      <div class="cart-confirm-box">
+        <span class="cart-confirm-icon">🛒</span>
+        <h3 class="cart-confirm-title">Đã thêm vào giỏ hàng!</h3>
+        <p class="cart-confirm-desc">
+          Bạn có muốn xem giỏ hàng ngay bây giờ không?
+        </p>
+        <div class="cart-confirm-actions">
+          <button id="btn-stay" class="btn-stay">Tiếp tục mua</button>
+          <button id="btn-go-cart" class="btn-go-cart">Xem giỏ hàng →</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="Menu.js"></script>
+  </body>
+</html>

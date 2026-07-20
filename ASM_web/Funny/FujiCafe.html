@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuji Cafe</title>
+    <link rel="stylesheet" href="../asset/css/root.css" />
+    <link rel="stylesheet" href="../asset/css/header.css" />
+    <link rel="stylesheet" href="../asset/css/Cafe&Chill.css" />
+    <link rel="stylesheet" href="../asset/css/footer.css" />
+    <link rel="stylesheet" href="../asset/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar section-content">
+        <a href="/Funny/FujiCafe.html" class="nav-logo">
+          <h2 class="logo-text">富士喫茶 | Fuji Cafe</h2>
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/Funny/FujiCafe.html" class="nav-link nav-link-active"
+              >Home</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a href="/About/about.html" class="nav-link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/Menu/Menu.html" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Contact/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Log_in/Log_in.html" class="nav-link">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Cart/Cart.html" class="nav-link">Giỏ hàng</a>
+          </li>
+        </ul>
+        <!-- Nút close nằm ngoài nav-menu để tránh bị clipped bởi transition/stacking context -->
+        <button
+          id="menu-close-button"
+          class="fas fa-times"
+          title="Close menu"
+        ></button>
+        <button
+          id="menu-open-button"
+          class="fas fa-bars"
+          title="Open menu"
+        ></button>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero section-->
+      <section class="hero-section">
+        <div class="section-content">
+          <div class="hero-detail">
+            <h2 class="title">富士喫茶 | Fuji Cafe</h2>
+            <h3 class="subtitle">
+              Một tiệm cà phê yên tĩnh, lấy cảm hứng từ tinh thần Nhật Bản giữa
+              lòng thành phố Đà Nẵng
+            </h3>
+            <p class="description">
+              Từ những hạt cà phê được chọn lọc cẩn thận, kết hợp cùng phong
+              cách pha chế thủ công đề cao sự chậm rãi và chính xác, chúng tôi
+              trân trọng từng công đoạn để tạo nên một tách cà phê tròn vị.<br /><br />
+              Đây là nơi nhịp sống lắng xuống, nơi bạn có thể tạm gác lại những
+              vội vã thường ngày và tận hưởng khoảnh khắc tĩnh lặng, nhẹ nhàng
+              như một khoảng “nghỉ” nhỏ cho tâm hồn.
+            </p>
+            <div class="buttons">
+              <a href="/Menu/Menu.html" class="button order-now">Menu</a>
+              <a href="/Contact/contact.html" class="button contact-us"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <img
+              src="../asset/Images/responsive-coffee-website-html-and-css-images/images/KURS_02_03.jpg  "
+              alt="Hero"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Menu section-->
+      <section class="BestSeller-section" id="BestSeller">
+        <h2 class="section-title">Best Seller</h2>
+        <div class="section-content">
+          <ul class="BestSeller-list">
+            <li class="BestSeller-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/hot-beverages.png"
+                alt="Hot Beverages"
+                class="menu-image"
+              />
+              <h3 class="name">Cappuccino</h3>
+              <p class="text">
+                Espresso cân bằng với lớp sữa hấp mịn và bọt sữa mềm, trang trí
+                tinh tế theo phong cách latte art Nhật Bản.
+              </p>
+            </li>
+            <li class="BestSeller-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/Black_Eye-removebg-preview.png"
+                alt="Cold Beverages"
+                class="menu-image"
+              />
+              <h3 class="name">Cà phê đen</h3>
+              <p class="text">
+                Hạt cà phê Arabica nguyên chất, rang vừa, mang hương vị đậm đà
+                và tinh tế của cà phê Nhật Bản truyền thống.
+              </p>
+            </li>
+            <li class="BestSeller-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/Kyoto_Calm___Green_Tea___Yuzu_Sparkling_Cooler-removebg-preview.png"
+                alt="Refreshment"
+                class="menu-image"
+              />
+              <h3 class="name">Yuzu Soda</h3>
+              <p class="text">
+                Nước soda tươi mát với vị yuzu chua ngọt đặc trưng, giải nhiệt
+                tuyệt vời cho mùa hè.
+              </p>
+            </li>
+            <li class="BestSeller-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/一眼レフカメラEOS_Kiss_X7で撮った写真を自写自賛_悪くないんだけど_ちょっと荒いかなぁ___もうちょっと_しっとり感が欲しいなぁ____-removebg-preview.png"
+                alt="Special Combo"
+                class="menu-image"
+              />
+              <h3 class="name">Dorayaki</h3>
+              <p class="text">
+                Bánh rán truyền thống Nhật Bản nhân đậu đỏ ngọt, mềm mịn và thơm
+                ngon, được yêu thích từ nhiều thế hệ.
+              </p>
+            </li>
+            <li class="BestSeller-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/The_Ultimate_Homemade_Hot_Chocolate_-_Flavour_Recipe-removebg-preview.png"
+                alt="Desserts"
+                class="menu-image"
+              />
+              <h3 class="name">Hot Chocolate</h3>
+              <p class="text">
+                Sô-cô-la đen Bỉ cao cấp pha chế với sữa tươi nóng, đậm đà và
+                quyến rũ, hoàn hảo cho ngày lạnh.
+              </p>
+            </li>
+            <li class="BestSeller-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/download__2_-removebg-preview.png"
+                alt="tiramisu"
+                class="menu-image"
+              />
+              <h3 class="name">Tiramisu</h3>
+              <p class="text">
+                Bánh tiramisu mềm mịn, vị cà phê hòa quyện cùng lớp kem béo nhẹ,
+                ngọt nhẹ và
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--Testimonials section-->
+      <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">Đánh giá</h2>
+        <div class="section-content">
+          <div class="section-container swiper">
+            <div class="slider-wrapper">
+              <ul class="testimonials-list swiper-wrapper">
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-1.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">Sarah Johnson</h3>
+                  <i class="feeback"
+                    >"Loved the French roast. Perfectly balanced and rich. Will
+                    order again!"</i
+                  >
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-2.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">James Wilson</h3>
+                  <i class="feeback"
+                    >"Great espresso blend! Smooth and bold flavor. Fast
+                    shipping too!"</i
+                  >
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-3.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">Michael Brown</h3>
+                  <i class="feeback"
+                    >"Fantastic mocha flavor. Fresh and aromatic. Quick
+                    shipping!"</i
+                  >
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-4.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">Emily Harris</h3>
+                  <i class="feeback"
+                    >"Excellent quality! Fresh beans and quick delivery. Highly
+                    recommend."</i
+                  >
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-5.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">Anthony Thompson</h3>
+                  <i class="feeback"
+                    >"Best decaf I've tried! Smooth and flavorful. Arrived
+                    promptly."</i
+                  >
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-6.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">Nhật</h3>
+                  <i class="feeback"
+                    >"Cà phê có hương vị thơm và dễ uống, đậm vị, không gắt.
+                    Không gian yên tĩnh, rất thích hợp để thư giãn hoặc tập
+                    trung làm việc."</i
+                  >
+                </li>
+                <li class="testimonial swiper-slide">
+                  <img
+                    src="../asset/Images/responsive-coffee-website-html-and-css-images/images/user-7.jpg"
+                    alt="User"
+                    class="user-image"
+                  />
+                  <h3 class="name">Khôi</h3>
+                  <i class="feeback"
+                    >"Cà phê thơm, vị nhẹ và dễ chịu. Không gian quán ấm áp,
+                    mang lại cảm giác thoải mái ngay từ lần ghé đầu tiên."</i
+                  >
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Gallery section-->
+      <section class="gallery-section" id="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <div class="section-content">
+          <ul class="gallery-list">
+            <li class="gallery-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/download (3).jpg"
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/AI Espresso Machine.jpg"
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/Une mousse au chocolat prête en 10 min _ cette version ultra facile se fait avec du cacao en poudre.jpg"
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/tiramisu.jpg"
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/Espresso.jpg"
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </li>
+            <li class="gallery-item">
+              <img
+                src="../asset/Images/responsive-coffee-website-html-and-css-images/images/download (4).jpg"
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!--Footer section-->
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">© 2026 富士喫茶 | Fuji Cafe</p>
+        <div class="social-link-list">
+          <a href="#" class="social-link" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="social-link" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link" aria-label="Twitter"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+        <p class="policy-text">
+          <a href="#" class="policy-link">Privacy policy</a>
+          <span class="separator">•</span>
+          <a href="#" class="policy-link">Refound policy</a>
+        </p>
+      </div>
+    </footer>
+
+    <!--Linking swiper script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!--Linking custom script-->
+    <script src="/Funny/Cafe&Chill.js"></script>
+  </body>
+</html>

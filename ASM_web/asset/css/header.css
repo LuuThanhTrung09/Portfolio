@@ -1,0 +1,104 @@
+/*Navbar style*/
+header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #5c3a36 100%);
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(74, 44, 42, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.6s ease-out;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-logo {
+  font-family: "Shippori Mincho";
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--soft-cream);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  font-family: "Shippori Mincho";
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+}
+.nav-item {
+  padding: 0.5rem 0;
+}
+.nav-link {
+  color: var(--soft-cream);
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+
+  font-size: var(--font-size-m);
+  border-radius: var(--border-radius-m);
+  font-family: "Playfair", serif;
+
+  display: block;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transition: width 0.3s ease;
+  display: block;
+}
+
+.nav-item:hover .nav-link::after,
+.nav-link:active .nav-link::after {
+  width: 100%;
+}
+
+.nav-link-active::after {
+  width: 100%;
+}
+
+#menu-close-button,
+#menu-open-button {
+  display: none;
+}
+
+/* Header */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

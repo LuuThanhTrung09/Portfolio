@@ -1,0 +1,347 @@
+/* Hero Section - GRADIENT AURORA ANIMATION */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #4a2c2a 0%,
+    #5c3a36 20%,
+    #2d4a3e 40%,
+    #3e5a4e 60%,
+    #d4a574 80%,
+    #4a2c2a 100%
+  );
+  background-size: 400% 400%;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: gradientAurora 18s ease infinite;
+  will-change: background-position;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes gradientAurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 25%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Lớp ánh sáng chuyển động bên trong */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(212, 165, 116, 0.15) 0%,
+    transparent 50%
+  );
+  animation: auroraLight 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes auroraLight {
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.5;
+  }
+  33% {
+    transform: translate(30%, -20%) scale(1.2);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate(-30%, 20%) scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+/* Lớp particles trang trí */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="white" opacity="0.08"/></svg>');
+  animation: shimmer 25s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(100px) translateY(100px);
+  }
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--soft-cream);
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--warm-beige);
+  opacity: 0.95;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+  margin-bottom: 10px;
+  font-family: "Shippori Mincho", serif;
+}
+
+.about-section {
+  padding: 120px 0;
+  /* FIX 4: Tên biến CSS sai "--soft-gray--" (2 dấu gạch ở cuối) → "--soft-gray" */
+  background: var(--soft-gray);
+}
+
+.about-section .section-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+}
+
+.about-section .about-details .section-title {
+  padding: 0;
+  font-family: "playfair", serif;
+  text-align: center;
+}
+
+.about-section .about-details {
+  max-width: 50%;
+}
+
+.about-section .about-details .text {
+  line-height: 30px;
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: var(--font-size-m);
+  font-family: "Playfair", serif;
+}
+
+.about-section .social-link-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  /* FIX 5: Thiếu đơn vị "s" trong transition → "0.2s ease" */
+  transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link {
+  color: var(--primary-color);
+  font-size: var(--font-size-l);
+}
+
+.about-section .social-link-list .social-link :hover {
+  color: var(--secondary-color);
+}
+
+.hero-section {
+  min-height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero background with blur effect */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/asset/Images/responsive-coffee-website-html-and-css-images/images/KURS_02_03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Keyframe animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Dark overlay */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 20, 28, 0.7);
+  z-index: 1;
+}
+
+.hero-section .section-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--white-color);
+  justify-content: space-between;
+}
+
+.hero-section .hero-detail .title {
+  font-size: var(--font-size-xl);
+  color: var(--secondary-color);
+  font-family: "Shippori Mincho";
+  font-weight: 700;
+  line-height: var(--line-height-ja-tile);
+  letter-spacing: 0.1em;
+  margin: 0;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-section .hero-detail .subtitle {
+  margin-top: 1.5rem;
+  max-width: 80%;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+  font-family: "Playfair", serif;
+  letter-spacing: 0.05em;
+  line-height: var(--line-height-ja-tile);
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-section .hero-detail .description {
+  max-width: 80%;
+  margin: 3rem 0 2.5rem;
+  font-size: var(--font-size-l);
+  font-family: "Playfair", serif;
+  /* FIX 6: "color-scheme" không phải property hợp lệ ở đây → đổi thành "color" */
+  color: var(--white-color);
+  line-height: var(--line-height-ja-text);
+  letter-spacing: 0.02em;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-section .hero-details .buttons {
+  display: flex;
+  gap: 23px;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-section .hero-detail .button {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--primary-color);
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s ease;
+  font-family: "Shippori Mincho";
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.hero-section .hero-image-wrapper .hero-image {
+  max-width: 1500px;
+  margin-left: 60px;
+  margin-right: 0;
+  object-fit: contain;
+  animation: fadeInScale 1.2s ease-out 0.3s both;
+}
+
+.hero-section .hero-detail .button:hover,
+.hero-section .hero-detail .contact-us {
+  color: var(--light-gray--);
+  border-color: var(--light-gray--);
+  background: transparent;
+  font-family: "playfair", serif;
+}
+
+.hero-section .hero-detail .contact-us:hover {
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+.hero-section .hero-image-wrapper {
+  max-width: 800px;
+  margin-right: 40px;
+}

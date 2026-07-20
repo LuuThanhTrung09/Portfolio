@@ -1,0 +1,204 @@
+@media screen and (max-width: 1024px) {
+  .menu-section .menu-list {
+    gap: 70px;
+  }
+  .menu-section .menu-list .menu-item {
+    width: calc(100% / 3 - 70px);
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+  }
+
+  body.show-mobile-menu header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  /* Mặc định (menu đang đóng): chỉ hiện nút hamburger, ẩn nút close */
+  #menu-open-button {
+    display: block;
+    font-size: var(--font-size-l);
+  }
+
+  #menu-close-button {
+    display: none;
+    font-size: var(--font-size-l);
+  }
+
+  .navbar #menu-close-button {
+    position: fixed !important;
+    top: 30px !important;
+    right: auto !important;
+    left: 240px !important; /* nav-menu rộng 300px, padding-right 30px -> căn nút X vào bên trong panel */
+    z-index: 1002 !important;
+  }
+
+  .navbar #menu-open-button {
+    color: var(--white-color);
+    z-index: 1001;
+    font-size: 1.8rem;
+    margin-right: 14px;
+    padding: 4px;
+  }
+
+  /* Khi menu mở: ẩn hamburger, hiện nút close */
+  body.show-mobile-menu .navbar #menu-open-button {
+    display: none;
+  }
+
+  body.show-mobile-menu .navbar #menu-close-button {
+    display: block;
+  }
+
+  .navbar .nav-menu {
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 30px 30px;
+    background: var(--white-color);
+    transition: left 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+
+  .navbar .nav-menu .nav-link {
+    color: var(--dark-color);
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    font-size: var(--font-size-m);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+    border-radius: 8px;
+  }
+
+  .hero-section .section-content {
+    gap: 40px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section .hero-detail :is(.subtitle, .description),
+  .about-section .about-details,
+  .contact-section .contact-form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-section .hero-detail .buttons {
+    justify-content: center;
+    font-size: var(--font-size-s);
+  }
+
+  /* FIX: Điều chỉnh hero image cho mobile */
+  .hero-section .hero-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section .hero-image-wrapper .hero-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .about-section .section-content {
+    gap: 70px;
+    flex-direction: column;
+  }
+
+  .about-section .about-image-wrapper .about-image {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+
+  .BestSeller-section .BestSeller-list {
+    gap: 40px;
+  }
+
+  .BestSeller-section .BestSeller-list .BestSeller-item {
+    width: calc(100% / 2 - 40px);
+  }
+
+  .BestSeller-section .BestSeller-list .BestSeller-item .menu-image {
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+  }
+
+  .gallery-section .gallery-list {
+    gap: 30px;
+  }
+
+  .gallery-section .gallery-list .gallery-item {
+    width: calc(100% / 2 - 30px);
+  }
+
+  .contact-section .section-content {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /* Điều chỉnh thêm cho màn hình rất nhỏ */
+  .hero-section .hero-image-wrapper .hero-image {
+    max-width: 250px;
+  }
+
+  .BestSeller-section .BestSeller-list {
+    gap: 70px;
+  }
+
+  .BestSeller-section .BestSeller-list .BestSeller-item,
+  .gallery-section .gallery-list .gallery-item {
+    width: 100%;
+  }
+
+  .testimonials-section .slider-wrapper {
+    margin: 0 0 30px;
+  }
+
+  .testimonials-section .swiper-slide-button {
+    display: none;
+  }
+
+  .footer-section .section-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

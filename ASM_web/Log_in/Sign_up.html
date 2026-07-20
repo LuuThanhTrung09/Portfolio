@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../asset/css/root.css" />
+    <link rel="stylesheet" href="../asset/css/header.css" />
+    <link rel="stylesheet" href="../asset/css/Sign_up.css" />
+    <link rel="stylesheet" href="../asset/css/footer.css" />
+    <link rel="stylesheet" href="../asset/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="logo">
+        <h1>富士喫茶 | Fuji Cafe</h1>
+        <p>Japanese Coffee Experience</p>
+      </div>
+
+      <h2>Đăng Ký Tài Khoản</h2>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" name="email" required />
+          <div class="error-message" id="emailError">Email không hợp lệ</div>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Tên đăng nhập <span>*</span></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            minlength="4"
+          />
+          <div class="error-message" id="usernameError">
+            Tên đăng nhập phải có ít nhất 4 ký tự
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu <span>*</span></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="6"
+          />
+          <div class="strength-bar">
+            <div class="strength-bar-fill" id="strengthBar"></div>
+          </div>
+          <div class="password-strength" id="strengthText"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Xác nhận mật khẩu <span>*</span></label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+          <div class="error-message" id="confirmPasswordError">
+            Mật khẩu không khớp
+          </div>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms">
+            Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và
+            <a href="#">Chính sách bảo mật</a> của Fuji Cafe
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-signup">Đăng Ký</button>
+
+        <div class="divider">hoặc</div>
+
+        <button
+          type="button"
+          class="btn btn-login"
+          onclick="alert('Chuyển đến trang đăng nhập')"
+        >
+          Đăng Nhập
+        </button>
+
+        <div class="login-link">
+          Đã có tài khoản?
+          <a
+            href="#"
+            onclick="
+              alert('Chuyển đến trang đăng nhập');
+              return false;
+            "
+            >Đăng nhập ngay</a
+          >
+          <a
+            href="/Log_in/Log_in.html"
+            class="login-link-btn"
+            >Đăng nhập</a
+          >
+        </div>
+      </form>
+    </div>
+
+    <!-- Link file JS riêng -->
+    <script src="Sign_up.js"></script>
+  </body>
+</html>

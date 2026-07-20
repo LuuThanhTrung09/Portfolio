@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="../asset/css/root.css" />
+    <link rel="stylesheet" href="../asset/css/header.css" />
+    <link rel="stylesheet" href="../asset/css/Log_in.css" />
+    <link rel="stylesheet" href="../asset/css/footer.css" />
+    <link rel="stylesheet" href="../asset/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo">
+        <h1>富士喫茶 | Fuji Cafe</h1>
+        <p>Japanese Coffee Experience</p>
+      </div>
+
+      <h2>Đăng Nhập</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="username">User Name:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember" name="remember" />
+          <label for="remember">Remember me?</label>
+        </div>
+
+        <button type="submit" class="btn btn-login">Login</button>
+
+        <div class="divider">hoặc</div>
+
+        <button
+          type="button"
+          class="btn btn-signup"
+          onclick="window.location.href = 'Sign_up.html'"
+        >
+          Sign Up
+        </button>
+
+        <div class="signup-link">
+          Chưa có tài khoản? <a href="Sign_up.html">Đăng ký</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Link file JS riêng -->
+    <script src="Log_in.js"></script>
+  </body>
+</html>

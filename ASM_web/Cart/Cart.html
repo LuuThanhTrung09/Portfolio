@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng - Fuji Cafe</title>
+    <link rel="stylesheet" href="../asset/css/root.css" />
+    <link rel="stylesheet" href="../asset/css/header.css" />
+    <link rel="stylesheet" href="../asset/css/Cart.css" />
+    <link rel="stylesheet" href="../asset/css/footer.css" />
+    <link rel="stylesheet" href="../asset/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="decoration decoration-1"></div>
+    <div class="decoration decoration-2"></div>
+
+    <header>
+      <nav class="navbar section-content">
+        <a href="/Funny/FujiCafe.html" class="nav-logo">
+          <h2 class="logo-text">富士喫茶 | Fuji Cafe</h2>
+        </a>
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+
+          <li class="nav-item">
+            <a href="/Funny/FujiCafe.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/About/about.html" class="nav-link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/Menu/Menu.html" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Contact/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Log_in/Log_in.html" class="nav-link">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a href="/Cart/Cart.html" class="nav-link nav-link-active"
+              >Giỏ hàng</a
+            >
+          </li>
+        </ul>
+        <!-- <div class="nav-blank"></div> -->
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Giỏ Hàng</h1>
+        <p>Hoàn tất đơn hàng của bạn</p>
+      </div>
+    </section>
+
+    <div class="cart-container">
+      <!-- Bên trái: Thông tin người nhận -->
+      <div class="customer-info-section">
+        <h2 class="section-title">
+          <span class="title-icon">👤</span>
+          Thông Tin Người Nhận
+        </h2>
+
+        <form id="customer-form" class="customer-form">
+          <div class="form-group">
+            <label for="customer-name">
+              Họ và Tên <span class="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="customer-name"
+              name="name"
+              placeholder="Nhập họ và tên"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-phone">
+              Số Điện Thoại <span class="required">*</span>
+            </label>
+            <input
+              type="tel"
+              id="customer-phone"
+              name="phone"
+              placeholder="Nhập số điện thoại"
+              pattern="[0-9]{10,11}"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-email"> Email </label>
+            <input
+              type="email"
+              id="customer-email"
+              name="email"
+              placeholder="Nhập email (tùy chọn)"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-address">
+              Địa Chỉ Giao Hàng <span class="required">*</span>
+            </label>
+            <textarea
+              id="customer-address"
+              name="address"
+              rows="3"
+              placeholder="Nhập địa chỉ giao hàng (VD: 123 Nguyễn Huệ, Quận 1, TP.HCM)"
+              required
+            ></textarea>
+            <!-- Distance result -->
+            <div
+              id="distance-result"
+              class="distance-result"
+              style="display: none"
+            >
+              <div class="distance-info">
+                <span class="distance-icon" id="distance-icon">📍</span>
+                <div class="distance-details">
+                  <span id="distance-text" class="distance-text"></span>
+                  <span id="distance-fee-text" class="distance-fee-text"></span>
+                </div>
+                <span
+                  id="distance-loader"
+                  class="distance-loader"
+                  style="display: none"
+                  >⏳ Đang tính...</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="delivery-time"> Thời Gian Giao Hàng </label>
+            <select id="delivery-time" name="deliveryTime">
+              <option value="asap">Càng sớm càng tốt</option>
+              <option value="morning">Buổi sáng (8:00 - 12:00)</option>
+              <option value="afternoon">Buổi chiều (12:00 - 17:00)</option>
+              <option value="evening">Buổi tối (17:00 - 21:00)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-note"> Ghi Chú </label>
+            <textarea
+              id="customer-note"
+              name="note"
+              rows="3"
+              placeholder="Ghi chú thêm cho đơn hàng (tùy chọn)"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="payment-method-label">
+              Phương Thức Thanh Toán <span class="required">*</span>
+            </label>
+            <div class="payment-methods">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="cod" checked />
+                <span class="payment-label">
+                  <span class="payment-icon">💵</span>
+                  <span class="payment-text"
+                    >Thanh toán khi nhận hàng (COD)</span
+                  >
+                </span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="bank" />
+                <span class="payment-label">
+                  <span class="payment-icon">🏦</span>
+                  <span class="payment-text">Chuyển khoản ngân hàng</span>
+                </span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="momo" />
+                <span class="payment-label">
+                  <span class="payment-icon">📱</span>
+                  <span class="payment-text">Ví MoMo</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Bên phải: Thông tin sản phẩm -->
+      <div class="cart-items-section">
+        <h2 class="section-title">
+          <span class="title-icon">🛒</span>
+          Sản Phẩm Đã Chọn
+          <span id="cart-count" class="cart-count">0</span>
+        </h2>
+
+        <!-- Empty cart message -->
+        <div id="empty-cart" class="empty-cart">
+          <div class="empty-icon">🛍️</div>
+          <p class="empty-text">Giỏ hàng của bạn đang trống</p>
+          <a href="/Menu/Menu.html" class="back-to-menu">Quay lại Menu</a>
+        </div>
+
+        <!-- Cart items -->
+        <div id="cart-items" class="cart-items"></div>
+
+        <!-- Order Summary -->
+        <div id="order-summary" class="order-summary" style="display: none">
+          <div class="summary-row">
+            <span>Tạm tính:</span>
+            <span id="subtotal">0₫</span>
+          </div>
+          <div class="summary-row">
+            <span>Phí giao hàng:</span>
+            <span id="shipping-fee">--</span>
+          </div>
+          <div class="summary-row total">
+            <span>Tổng cộng:</span>
+            <span id="total">0₫</span>
+          </div>
+
+          <button id="place-order-btn" class="place-order-btn">
+            <span class="btn-text">ĐẶT HÀNG NGAY</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content success-content">
+        <div class="success-icon">✓</div>
+        <h2>Đặt Hàng Thành Công!</h2>
+        <p>Cảm ơn bạn đã đặt hàng tại Fuji Cafe.</p>
+        <p>Chúng tôi sẽ liên hệ với bạn sớm nhất.</p>
+        <div class="success-buttons">
+          <a
+            href="/ASM_web/ASM_web/ASM_web/Menu/Menu.html"
+            class="btn-secondary"
+            >Tiếp tục mua sắm</a
+          >
+          <button id="view-order-btn" class="btn-primary">Xem đơn hàng</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer section-->
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">© 2026 富士喫茶 | Fuji Cafe</p>
+        <div class="social-link-list">
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+        <p class="policy-text">
+          <a href="#" class="policy-link">Privacy policy</a>
+          <span class="separator">•</span>
+          <a href="#" class="policy-link">Refound policy</a>
+        </p>
+      </div>
+    </footer>
+    <!-- Custom Delete Confirm Dialog -->
+    <div id="delete-confirm" class="delete-confirm-overlay">
+      <div class="delete-confirm-backdrop" id="delete-confirm-backdrop"></div>
+      <div class="delete-confirm-box">
+        <span class="delete-confirm-icon">🗑️</span>
+        <h3 class="delete-confirm-title">Xóa sản phẩm?</h3>
+        <p class="delete-confirm-desc">
+          Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng không?
+        </p>
+        <div class="delete-confirm-actions">
+          <button id="btn-delete-cancel" class="btn-delete-cancel">
+            Giữ lại
+          </button>
+          <button id="btn-delete-ok" class="btn-delete-ok">Xóa 🗑️</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="Cart.js"></script>
+  </body>
+</html>
