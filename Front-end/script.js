@@ -2,15 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Demo buttons — placeholder alert until real links are ready
-  document.querySelectorAll('.button').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      if (btn.getAttribute('href') === '#') {
-        e.preventDefault();
-        alert('Demo sẽ được cập nhật sớm nhất! 🚀');
-      }
-    });
-  });
+  // Demo buttons now all have real links, so no click-interception is
+  // needed — the browser navigates normally via the anchor's href.
 
   // Scroll reveal for hero copy, section heads, project cards, tech items
   const revealEls = document.querySelectorAll('.reveal');

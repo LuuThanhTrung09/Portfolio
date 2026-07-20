@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEA STATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://uhchat.net/code.php?f=a11cba"></script>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-btn" id="menuBtn" title="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Slide Menu -->
+    <nav class="slide-menu" id="slideMenu">
+        <div class="menu-header">
+            <h2>TEA STATION</h2>
+            <p>Premium Tea Collection</p>
+        </div>
+        <div class="menu-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-footer">
+            <p>Follow Us</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Instagram">i</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <p class="banner-subtitle">Over one hundred flavors of tea</p>
+            <h1 class="banner-title">SPECIALLY CRAFTED TEA</h1>
+            <a href="#features" class="btn-explore">E X P L O R E</a>
+        </div>
+    </section>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>MADE WITH LOVE</h3>
+                <p>Our tea is made with love, from the collection of the leaves to the brewing.</p>
+            </div>
+            <div class="feature-card">
+                <h3>RELAXATION</h3>
+                <p>Set aside anxiety and relax after a hard day with a cup of hot tea in your hands.</p>
+            </div>
+            <div class="feature-card">
+                <h3>ENERGY</h3>
+                <p>Our tea will energize you with vitamins and invigorate the rest of the day.</p>
+            </div>
+            <div class="feature-card">
+                <h3>FAMILY RECIPE</h3>
+                <p>All our recipes are passed down from generation to generation for a long time</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="/img/Japanese Living Room Design_ Harmonious Interiors - The Style Canvas.jpg" alt="Tea Station">
+            </div>
+            <div class="about-content">
+                <p class="section-subtitle">About Our</p>
+                <h2 class="about-title">TEA STATION</h2>
+                <p>Once upon a time we only had a couple of teapots and enjoyed tea only with our family. Over time, we were able to afford to buy a small tea plantation</p>
+                <p>Now we have a whole teahouse and we delight many people with delicious and hot tea. We serve black long tea, relaxing green and jasmine tea, tea with spices and many others.</p>
+                <button class="btn-learn" id="learnMoreBtn">LEARN MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Lightbox Modal -->
+    <div class="about-modal" id="aboutModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" title="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="modal-header">
+                <p class="section-subtitle">Discover</p>
+                <h2 class="modal-title">THE TEA STATION STORY</h2>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-image-wrapper">
+                        <img src="/img/Japanese Living Room Design_ Harmonious Interiors - The Style Canvas.jpg" alt="Tea Station Interior">
+                    </div>
+                    
+                    <div class="story-content">
+                        <h3>Our Beginning</h3>
+                        <p>Founded in 1995, Tea Station began as a humble family venture with nothing more than a passion for exceptional tea and a few cherished teapots passed down through generations. What started in a small corner of our family home has blossomed into a sanctuary for tea lovers across the region.</p>
+                        
+                        <p>Our founder, Master Chen Wei, spent years traveling through the misty mountains of Asia, learning ancient tea cultivation techniques from master tea farmers and studying the intricate art of tea blending. These invaluable experiences shaped our philosophy: to honor tradition while embracing innovation.</p>
+                    </div>
+                </div>
+
+                <div class="modal-section reverse">
+                    <div class="story-content">
+                        <h3>Our Tea Gardens</h3>
+                        <p>Today, we own and operate three pristine tea plantations nestled in the highlands, where the perfect combination of altitude, climate, and soil creates ideal conditions for cultivating premium tea leaves. Each plantation specializes in different varieties:</p>
+                        
+                        <ul class="tea-list">
+                            <li><strong>Highland Estate:</strong> Home to our finest long black teas and oolong varieties</li>
+                            <li><strong>Jasmine Valley:</strong> Where we grow delicate green teas and aromatic jasmine flowers</li>
+                            <li><strong>Spice Garden:</strong> Cultivates herbs and spices for our signature blended teas</li>
+                        </ul>
+                        
+                        <p>All our teas are hand-picked at dawn when the leaves contain maximum flavor and nutrients, then processed using time-honored methods that preserve their natural essence and health benefits.</p>
+                    </div>
+                    
+                    <div class="modal-image-wrapper">
+                        <img src="/img/Harvesting Seasons on Pu Erh Tea Quality.jpg" alt="Tea Plantation">
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="modal-image-wrapper">
+                        <img src="/img/photo-1564890369478-c89ca6d9cde9.jpg" alt="Tea Ceremony">
+                    </div>
+                    
+                    <div class="story-content">
+                        <h3>The Tea Station Experience</h3>
+                        <p>Our teahouse is more than just a place to enjoy tea—it's a tranquil retreat from the bustling modern world. Step into our traditional Japanese-inspired space and experience:</p>
+                        
+                        <ul class="tea-list">
+                            <li><strong>Authentic Tea Ceremonies:</strong> Participate in traditional tea ceremonies led by certified tea masters</li>
+                            <li><strong>Tasting Sessions:</strong> Explore our seasonal collection and rare vintage teas</li>
+                            <li><strong>Meditation Garden:</strong> Find peace in our serene outdoor tea garden</li>
+                            <li><strong>Educational Workshops:</strong> Learn about tea history, brewing techniques, and health benefits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-section reverse">
+                    <div class="story-content">
+                        <h3>Our Commitment</h3>
+                        <p>At Tea Station, we believe that every cup of tea should be an experience—a moment of mindfulness in an otherwise hectic day. That's why we're committed to:</p>
+                        
+                        <ul class="tea-list">
+                            <li><strong>Sustainability:</strong> 100% organic farming practices with zero pesticides</li>
+                            <li><strong>Fair Trade:</strong> Direct partnerships with local farmers ensuring fair wages</li>
+                            <li><strong>Quality:</strong> Every batch is tested and tasted by our expert sommeliers</li>
+                            <li><strong>Community:</strong> Supporting local artisans and traditional crafts</li>
+                            <li><strong>Education:</strong> Free workshops and resources for tea enthusiasts</li>
+                        </ul>
+                        
+                        <p>We source our teaware from local craftspeople, use biodegradable packaging, and donate a portion of our profits to environmental conservation efforts in tea-growing regions.</p>
+                    </div>
+                    
+                    <div class="modal-image-wrapper">
+                        <img src="https://statics.vinpearl.com/vietnamese-jasmine-tea-1_1701314273.jpg" alt="Premium Tea">
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="story-content full-width">
+                        <h3>Visit Us Today</h3>
+                        <p>Whether you're a seasoned tea connoisseur or just beginning your journey into the world of fine teas, Tea Station welcomes you. Our knowledgeable staff is always ready to guide you through our extensive collection, recommend the perfect brew for your palate, and share the stories behind each unique blend.</p>
+                        
+                        <p>Join us for a cup of tea and become part of our growing family. Experience the difference that passion, expertise, and dedication make in every sip.</p>
+                        
+                        <div class="modal-cta">
+                            <a href="#contact" class="btn-contact-modal">CONTACT US</a>
+                            <a href="#products" class="btn-products-modal">EXPLORE PRODUCTS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <h4>29+</h4>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100+</h4>
+                        <p>Tea Varieties</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>50K+</h4>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>3</h4>
+                        <p>Tea Plantations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="products-container">
+            <div class="products-content">
+                <p class="section-subtitle">Check Out</p>
+                <h2 class="products-title">OUR PRODUCTS</h2>
+                <p>Our assortment includes long tea, relaxing and invigorating green tea with spices, lemon juice, jasmine, cinnamon and anise, milk tea and many others.</p>
+                <a href="/inventory.html" class="btn-inventory">I N V E N T O R Y</a>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/1200x/4a/50/a6/4a50a642b19432cb66d44b8578c662e7.jpg" alt="Black Long Tea">
+                    <h3 class="product-name">BLACK LONG TEA</h3>
+                    <p class="product-price">$ 3.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://statics.vinpearl.com/vietnamese-jasmine-tea-1_1701314273.jpg" alt="Green Tea Jasmine">
+                    <h3 class="product-name">GREEN TEA WITH JASMINE</h3>
+                    <p class="product-price">$ 4.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <p class="section-subtitle">Explore</p>
+        <h2 class="services-title">OUR SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="/img/photo-1564890369478-c89ca6d9cde9.jpg" alt="Custom Recipe">
+                <div class="service-content">
+                    <h3>Custom Recipe Service</h3>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="/img/photo-1526367790999-0150786686a2.jpg" alt="Home Delivery">
+                <div class="service-content">
+                    <h3>Home Delivery Service</h3>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://www.tiarahealth.com/wp-content/uploads/2025/07/tea-and-longevity-can-a-daily-cup-really-slow-aging-002.jpg" alt="Tea Aging">
+                <div class="service-content">
+                    <h3>Tea Aging Service</h3>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <p class="section-subtitle">Customer</p>
+        <h2 class="reviews-title">REVIEWS</h2>
+        
+        <!-- Review Form -->
+        <div class="review-form-container">
+            <form id="reviewForm" class="review-form">
+                <div class="form-group">
+                    <label for="reviewName">YOUR NAME</label>
+                    <input type="text" id="reviewName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>RATING</label>
+                    <div class="star-rating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                    <input type="hidden" id="rating" value="5" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">YOUR REVIEW</label>
+                    <textarea id="reviewText" placeholder="Write your review here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit-review">POST REVIEW</button>
+            </form>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="reviews-list" id="reviewsList">
+            <!-- Sample Reviews -->
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="review-author">
+                        <div class="author-avatar">N</div>
+                        <div class="author-info">
+                            <h4>Nguyen Van A</h4>
+                            <div class="review-stars">
+                                <span>★★★★★</span>
+                            </div>
+                            <p class="review-date">2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-content">Absolutely love this tea! The flavor is incredible and the service is outstanding. Will definitely order again!</p>
+                <div class="review-actions">
+                    <button class="btn-like"><i class="fa-regular fa-thumbs-up"></i> Like <span class="count">5</span></button>
+                    <button class="btn-dislike"><i class="fa-regular fa-thumbs-down"></i> Dislike <span class="count">0</span></button>
+                    <button class="btn-reply"><i class="fa-regular fa-comment"></i> Reply</button>
+                </div>
+                <div class="reply-form-container hidden-form">
+                    <form class="reply-form">
+                        <input type="text" placeholder="Write your reply..." required>
+                        <button type="submit" class="btn-submit-reply">Send</button>
+                        <button type="button" class="btn-cancel-reply">Cancel</button>
+                    </form>
+                </div>
+                <div class="replies-container">
+                    <div class="reply-item">
+                        <div class="reply-author">
+                            <div class="author-avatar small">TS</div>
+                            <div>
+                                <h5>Tea Station</h5>
+                                <p class="reply-date">1 day ago</p>
+                            </div>
+                        </div>
+                        <p class="reply-content">Thank you so much for your kind words! We're delighted you enjoyed our tea. 🍵</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="review-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4>Tran Thi B</h4>
+                            <div class="review-stars">
+                                <span>★★★★☆</span>
+                            </div>
+                            <p class="review-date">1 week ago</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-content">Great quality tea with wonderful aroma. The packaging is beautiful too. Highly recommend the jasmine tea!</p>
+                <div class="review-actions">
+                    <button class="btn-like"><i class="fa-regular fa-thumbs-up"></i> Like <span class="count">12</span></button>
+                    <button class="btn-dislike"><i class="fa-regular fa-thumbs-down"></i> Dislike <span class="count">1</span></button>
+                    <button class="btn-reply"><i class="fa-regular fa-comment"></i> Reply</button>
+                </div>
+                <div class="reply-form-container hidden-form">
+                    <form class="reply-form">
+                        <input type="text" placeholder="Write your reply..." required>
+                        <button type="submit" class="btn-submit-reply">Send</button>
+                        <button type="button" class="btn-cancel-reply">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <p class="info-label">address</p>
+                    <p class="info-text">523 N FAIRFAX AVE<br>LOS ANGELES, CA 90048</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">email</p>
+                    <p class="info-text"><a href="https://mail.google.com/mail/u/0/#inbox" class="__cf_email__" data-cfemail="e99d8c889a9d889d808687a98e84888085c78a8684">teastation@gamil.com</a></p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">telephone</p>
+                    <p class="info-text">+ 123 456 789</p>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <p class="section-subtitle">contact us</p>
+                <form>
+                    <div class="form-group">
+                        <label for="contactName">N A M E</label>
+                        <input type="text" id="contactName" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">E M A I L</label>
+                        <input type="email" id="contactEmail" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">M E S S A G E</label>
+                        <textarea id="contactMessage" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">S U B M I T  H E R E</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="explore-map-footer">
+                <iframe class="explore-map-fit"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4426574722606!2d106.62322047451808!3d10.853897657761049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6c59ba4c97%3A0x535e784068f1558b!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1768982937008!5m2!1svi!2s"
+                    title="Tea Station location on Google Maps"
+                    width="600" height="450" allowfullscreen="" loading="lazy">
+                </iframe>
+    </div>
+    <footer>
+        <p>&copy; 2026 Tea Station</p>
+        <p class="footer-subtitle">Một quán trà truyền thống yên tĩnh giữa lòng thành phố Đà Nẵng</p>
+        <div class="social-link-list">
+            <a href="#" class="social-link" title="Visit our Facebook page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-link" title="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" title="Visit our Twitter page"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>

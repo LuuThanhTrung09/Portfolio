@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Sets Inventory - TEA STATION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-btn" id="menuBtn" title="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Slide Menu -->
+    <nav class="slide-menu" id="slideMenu">
+        <div class="menu-header">
+            <h2>TEA STATION</h2>
+            <p>Premium Tea Collection</p>
+        </div>
+        <div class="menu-nav">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-footer">
+            <p>Follow Us</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Instagram">i</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Inventory Header -->
+    <section class="inventory-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <p class="section-subtitle">Explore Our Collection</p>
+            <h1 class="inventory-title">TEA SETS INVENTORY</h1>
+            <p class="inventory-description">Discover our curated selection of traditional and modern tea sets, each crafted with care to enhance your tea experience</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Sets</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="modern">Modern</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+                <button class="filter-btn" data-filter="starter">Starter</button>
+            </div>
+            
+            <div class="search-sort">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search tea sets...">
+                </div>
+                <label for="sortSelect" class="sr-only">Sort tea sets by</label>
+                <select id="sortSelect" class="sort-select" title="Sort tea sets">
+                    <option value="default">Sort By</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                
+                <!-- Product 1 -->
+                <div class="product-item" data-category="traditional premium" data-price="189.99" data-name="Emperor's Collection">
+                    <div class="product-image">
+                        <img src="https://img.alicdn.com/imgextra/i2/2249518171/O1CN01AFe6EB2AENCuffnrr_!!2249518171.jpg" alt="Emperor's Collection">
+                        <div class="product-badge premium">Premium</div>
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(0)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Traditional Set</span>
+                        <h3 class="product-name">Emperor's Collection</h3>
+                        <p class="product-description">Exquisite porcelain tea set with hand-painted dragon motifs. Includes teapot, 6 cups, serving tray.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Hand-painted</span>
+                            <span><i class="fa-solid fa-check"></i> 7 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Gift box</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$189.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item" data-category="modern premium" data-price="149.99" data-name="Zen Garden Set">
+                    <div class="product-image">
+                        <img src="/img/Chinese tea setting.jpg" alt="Zen Garden Set">
+                        <div class="product-badge premium">Premium</div>
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(1)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Modern Set</span>
+                        <h3 class="product-name">Zen Garden Set</h3>
+                        <p class="product-description">Minimalist Japanese-inspired tea set with natural bamboo tray and ceramic teaware.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Bamboo tray</span>
+                            <span><i class="fa-solid fa-check"></i> 5 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Eco-friendly</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$149.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item" data-category="traditional" data-price="89.99" data-name="Classic Jasmine Set">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/0b/6b/17/0b6b17e04bcc0859ae170e18e9a64f80.jpg" alt="Classic Jasmine Set">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(2)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Traditional Set</span>
+                        <h3 class="product-name">Classic Jasmine Set</h3>
+                        <p class="product-description">Traditional white porcelain tea set perfect for jasmine and green teas. Delicate floral pattern.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Porcelain</span>
+                            <span><i class="fa-solid fa-check"></i> 6 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Classic design</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$89.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item" data-category="modern" data-price="119.99" data-name="Contemporary Glass Set">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/dc/f6/9a/dcf69ad5376bd355361263d6a3401d97.jpg" alt="Contemporary Glass Set">
+                        <div class="product-badge new">New</div>
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(3)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Modern Set</span>
+                        <h3 class="product-name">Contemporary Glass Set</h3>
+                        <p class="product-description">Modern double-wall glass teapot with infuser and matching cups. Watch your tea bloom beautifully.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Borosilicate glass</span>
+                            <span><i class="fa-solid fa-check"></i> 5 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Heat resistant</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$119.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-item" data-category="starter" data-price="45.99" data-name="Beginner's Essential Set">
+                    <div class="product-image">
+                        <img src="/img/The 5 Best Gongfu Tea Sets for Beginners (2025 Guide).jpg" alt="Beginner's Essential Set">
+                        <div class="product-badge bestseller">Bestseller</div>
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(4)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Starter Set</span>
+                        <h3 class="product-name">Beginner's Essential Set</h3>
+                        <p class="product-description">Perfect starter set for tea enthusiasts. Includes everything you need to begin your tea journey.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Complete set</span>
+                            <span><i class="fa-solid fa-check"></i> 4 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Affordable</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$45.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-item" data-category="traditional premium" data-price="259.99" data-name="Royal Dynasty Set">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/c0/81/bc/c081bc01c2fbf984ba209e02044487cc.jpg" alt="Royal Dynasty Set">
+                        <div class="product-badge premium">Premium</div>
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(5)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Traditional Set</span>
+                        <h3 class="product-name">Royal Dynasty Set</h3>
+                        <p class="product-description">Luxurious gold-trimmed porcelain set with intricate lotus flower design. Limited edition.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> 24K gold trim</span>
+                            <span><i class="fa-solid fa-check"></i> 9 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Limited edition</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$259.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-item" data-category="modern" data-price="79.99" data-name="Minimalist Ceramic Set">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/cb/8c/65/cb8c6512330d617c3927906331173bfc.jpg" alt="Minimalist Ceramic Set">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(6)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Modern Set</span>
+                        <h3 class="product-name">Minimalist Ceramic Set</h3>
+                        <p class="product-description">Sleek matte finish ceramic tea set in neutral tones. Perfect for modern home aesthetics.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Matte finish</span>
+                            <span><i class="fa-solid fa-check"></i> 5 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Dishwasher safe</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$79.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-item" data-category="starter" data-price="59.99" data-name="Daily Brew Set">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/24/00/81/24008187899d1de234db5f831afa8a0a.jpg" alt="Daily Brew Set">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(7)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Starter Set</span>
+                        <h3 class="product-name">Daily Brew Set</h3>
+                        <p class="product-description">Practical and durable tea set for everyday use. Simple yet elegant design.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Durable</span>
+                            <span><i class="fa-solid fa-check"></i> 4 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Easy care</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$59.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-item" data-category="traditional" data-price="129.99" data-name="Cherry Blossom Set">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/c6/b8/ef/c6b8ef6e0b5eb73408d08df0df09e72a.jpg" alt="Cherry Blossom Set">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" onclick="openQuickView(8)">
+                                <i class="fa-solid fa-eye"></i> Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Traditional Set</span>
+                        <h3 class="product-name">Cherry Blossom Set</h3>
+                        <p class="product-description">Beautiful sakura-themed tea set with delicate pink cherry blossom decorations.</p>
+                        <div class="product-features">
+                            <span><i class="fa-solid fa-check"></i> Sakura design</span>
+                            <span><i class="fa-solid fa-check"></i> 6 pieces</span>
+                            <span><i class="fa-solid fa-check"></i> Spring collection</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price">$129.99</span>
+                            </div>
+                            <button class="btn-add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h3>No tea sets found</h3>
+                <p>Try adjusting your filters or search terms</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="modal-overlay" id="quickViewOverlay"></div>
+            <button class="modal-close" id="quickViewClose" title="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            </button>
+            <div class="quick-view-body" id="quickViewBody">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Tea Station</p>
+        <p class="footer-tagline">A peaceful traditional tea house in the heart of the city</p>
+        <div class="social-link-list">
+            <a href="#" class="social-link" title="Visit our Facebook page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-link" title="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" title="Visit our Twitter page"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="inventory.js"></script>
+</body>
+</html>
