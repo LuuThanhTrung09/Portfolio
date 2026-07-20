@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Luu Thanh Trung</title>
+  <!-- Copy hết phần CSS, font, meta... từ index.html vào đây -->
+</head>
+<body>
+  <!-- Copy hết nội dung body của index.html -->
+  
+  <script>
+  // Fix routing cho GitHub Pages - Portfolio
+  (function() {
+    const path = window.location.pathname;
+    
+    // Nếu không phải trang chủ và chưa có hash
+    if (path !== '/' && path !== '/Portfolio/' && !window.location.hash) {
+      // Chuyển sang index.html nhưng giữ route
+      window.location.replace('/Portfolio/' + (path.startsWith('/') ? path : '/' + path));
+    }
+  })();
+</script>
+</body>
+</html>
