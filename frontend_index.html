@@ -1,146 +1,188 @@
 <!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Front-end | Lưu Thành Trung</title>
-  <meta name="description" content="Các dự án Front-end - Tea Station & Fuji Cafe" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-end | Lưu Thành Trung</title>
+    <meta
+      name="description"
+      content="Các dự án Front-end - Tea Station & Fuji Cafe"
+    />
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Front-end/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <a href="../index.html" class="logo">
-      <svg class="hanko hanko--mini" viewBox="0 0 100 100" aria-hidden="true">
-        <use href="#hanko-mark" />
-      </svg>
-      LTT
-    </a>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#tech">Technologies</a></li>
-      <li><a href="../#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="../index.html" class="logo">
+        <svg class="hanko hanko--mini" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#hanko-mark" />
+        </svg>
+        LTT
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#tech">Technologies</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Hero -->
-  <section class="hero hero--frontend" id="top">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__main reveal">
-      <span class="eyebrow">Front-end Development</span>
-      <h1 class="hero__name">CRAFTING DIGITAL EXPERIENCES</h1>
-      <p class="hero__role">Beautiful, responsive, and delightful web interfaces</p>
-      <svg class="brush-divider" viewBox="0 0 140 22" fill="none" aria-hidden="true">
-        <path d="M4 14 C 30 4, 55 20, 80 8 S 120 2, 136 12" />
-      </svg>
-      <p class="description">
-        Từ những trang web trà đạo truyền thống đến quán cà phê Nhật Bản hiện đại,
-        tôi tập trung vào trải nghiệm người dùng mượt mà, thẩm mỹ tối giản và hiệu năng cao.
-      </p>
-    </div>
-    <div class="hero__mark" aria-hidden="true">
-      <span class="jp-vertical">茶</span>
-      <svg class="hanko hanko--lg" viewBox="0 0 100 100">
-        <use href="#hanko-mark" />
-      </svg>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="hero hero--frontend" id="top">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__main reveal">
+        <span class="eyebrow">Front-end Development</span>
+        <h1 class="hero__name">CRAFTING DIGITAL EXPERIENCES</h1>
+        <p class="hero__role">
+          Beautiful, responsive, and delightful web interfaces
+        </p>
+        <svg
+          class="brush-divider"
+          viewBox="0 0 140 22"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M4 14 C 30 4, 55 20, 80 8 S 120 2, 136 12" />
+        </svg>
+        <p class="description">
+          Từ những trang web trà đạo truyền thống đến quán cà phê Nhật Bản hiện
+          đại, tôi tập trung vào trải nghiệm người dùng mượt mà, thẩm mỹ tối
+          giản và hiệu năng cao.
+        </p>
+      </div>
+      <div class="hero__mark" aria-hidden="true">
+        <span class="jp-vertical">茶</span>
+        <svg class="hanko hanko--lg" viewBox="0 0 100 100">
+          <use href="#hanko-mark" />
+        </svg>
+      </div>
+    </section>
 
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="selection__head reveal">
-      <span class="eyebrow">Featured Projects</span>
-      <h2>Dự án Front-end</h2>
-    </div>
-
-    <div class="projects-grid">
-      <!-- Tea Station -->
-      <div class="project-card reveal">
-        <span class="project-stamp">壱</span>
-        <div class="project-image">
-          <img src="/Pic/Front-end/Screenshot 2026-07-20 190548.png" alt="Tea Station" loading="lazy" />
-        </div>
-        <div class="project-info">
-          <h3>Tea Station</h3>
-          <span class="project-jp">茶の駅 — trang trà đạo</span>
-          <p class="project-desc">
-            Website bán trà cao cấp với thiết kế ấm áp, sang trọng.
-            Bao gồm inventory, review system, live chat và responsive hoàn hảo.
-          </p>
-          <div class="tech-tags">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span>
-          </div>
-          <a href="../ASM_them/index.html" class="button">Xem Demo →</a>
-        </div>
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="selection__head reveal">
+        <span class="eyebrow">Featured Projects</span>
+        <h2>Dự án Front-end</h2>
       </div>
 
-      <!-- Fuji Cafe -->
-      <div class="project-card reveal">
-        <span class="project-stamp">弐</span>
-        <div class="project-image">
-          <img src="/Pic/Front-end/Screenshot 2026-07-20 190646.png" alt="Fuji Cafe" loading="lazy" />
-        </div>
-        <div class="project-info">
-          <h3>Fuji Cafe</h3>
-          <span class="project-jp">富士カフェ — cà phê Nhật Bản</span>
-          <p class="project-desc">
-            Website quán cà phê Nhật Bản phong cách tối giản.
-            Menu động, gallery đẹp, form đặt hàng và hệ thống đặt bàn.
-          </p>
-          <div class="tech-tags">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>UI/UX</span>
+      <div class="projects-grid">
+        <!-- Tea Station -->
+        <div class="project-card reveal">
+          <span class="project-stamp">壱</span>
+          <div class="project-image">
+            <img
+              src="Pic/Front-end/Screenshot 2026-07-20 190548.png"
+              alt="Tea Station"
+              loading="lazy"
+            />
           </div>
-          <a href="../ASM_web/Funny/FujiCafe.html" class="button">Xem Demo →</a>
+          <div class="project-info">
+            <h3>Tea Station</h3>
+            <span class="project-jp">茶の駅 — trang trà đạo</span>
+            <p class="project-desc">
+              Website bán trà cao cấp với thiết kế ấm áp, sang trọng. Bao gồm
+              inventory, review system, live chat và responsive hoàn hảo.
+            </p>
+            <div class="tech-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+              ><span>Responsive</span>
+            </div>
+            <a href="ASM_index.html" class="button">Xem Demo →</a>
+          </div>
+        </div>
+
+        <!-- Fuji Cafe -->
+        <div class="project-card reveal">
+          <span class="project-stamp">弐</span>
+          <div class="project-image">
+            <img
+              src="/Pic/Front-end/Screenshot 2026-07-20 190646.png"
+              alt="Fuji Cafe"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-info">
+            <h3>Fuji Cafe</h3>
+            <span class="project-jp">富士カフェ — cà phê Nhật Bản</span>
+            <p class="project-desc">
+              Website quán cà phê Nhật Bản phong cách tối giản. Menu động,
+              gallery đẹp, form đặt hàng và hệ thống đặt bàn.
+            </p>
+            <div class="tech-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+              ><span>UI/UX</span>
+            </div>
+            <a href="FujiCafe.html" class="button">Xem Demo →</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Technologies -->
-  <section class="tech-section" id="tech">
-    <div class="selection__head reveal">
-      <span class="eyebrow">Tools & Skills</span>
-      <h2>Front-end Stack</h2>
-    </div>
-    <div class="tech-grid">
-      <div class="tech-item reveal" data-index="01">HTML5</div>
-      <div class="tech-item reveal" data-index="02">CSS3 / SCSS</div>
-      <div class="tech-item reveal" data-index="03">JavaScript (ES6+)</div>
-      <div class="tech-item reveal" data-index="04">Responsive Design</div>
-      <div class="tech-item reveal" data-index="05">UI/UX Principle</div>
-      <div class="tech-item reveal" data-index="06">Tailwind CSS</div>
-      <div class="tech-item reveal" data-index="07">GSAP / Scroll Animations</div>
-      <div class="tech-item reveal" data-index="08">Figma to Code</div>
-    </div>
-  </section>
+    <!-- Technologies -->
+    <section class="tech-section" id="tech">
+      <div class="selection__head reveal">
+        <span class="eyebrow">Tools & Skills</span>
+        <h2>Front-end Stack</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item reveal" data-index="01">HTML5</div>
+        <div class="tech-item reveal" data-index="02">CSS3 / SCSS</div>
+        <div class="tech-item reveal" data-index="03">JavaScript (ES6+)</div>
+        <div class="tech-item reveal" data-index="04">Responsive Design</div>
+        <div class="tech-item reveal" data-index="05">UI/UX Principle</div>
+        <div class="tech-item reveal" data-index="06">Tailwind CSS</div>
+        <div class="tech-item reveal" data-index="07">
+          GSAP / Scroll Animations
+        </div>
+        <div class="tech-item reveal" data-index="08">Figma to Code</div>
+      </div>
+    </section>
 
-  <footer>
-    <div class="footer__mark">
-      <svg class="hanko hanko--sm" viewBox="0 0 100 100"><use href="#hanko-mark" /></svg>
-      <p>Front-end Showcase — <strong>Lưu Thành Trung</strong></p>
-    </div>
-    <p class="footer__copy">© <span id="year">2026</span> Lưu Thành Trung</p>
-  </footer>
+    <footer>
+      <div class="footer__mark">
+        <svg class="hanko hanko--sm" viewBox="0 0 100 100">
+          <use href="#hanko-mark" />
+        </svg>
+        <p>Front-end Showcase — <strong>Lưu Thành Trung</strong></p>
+      </div>
+      <p class="footer__copy">© <span id="year">2026</span> Lưu Thành Trung</p>
+    </footer>
 
-  <!-- Reusable marks: hanko seal + signature brush stroke -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <g id="hanko-mark">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="var(--shu)" stroke-width="3"/>
-        <circle cx="50" cy="50" r="38" fill="none" stroke="var(--shu)" stroke-width="1"/>
-        <text x="50" y="35" text-anchor="middle" class="hanko__char">L</text>
-        <text x="50" y="59" text-anchor="middle" class="hanko__char">T</text>
-        <text x="50" y="83" text-anchor="middle" class="hanko__char">T</text>
-      </g>
-    </defs>
-  </svg>
+    <!-- Reusable marks: hanko seal + signature brush stroke -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <g id="hanko-mark">
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="none"
+            stroke="var(--shu)"
+            stroke-width="3"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="38"
+            fill="none"
+            stroke="var(--shu)"
+            stroke-width="1"
+          />
+          <text x="50" y="35" text-anchor="middle" class="hanko__char">L</text>
+          <text x="50" y="59" text-anchor="middle" class="hanko__char">T</text>
+          <text x="50" y="83" text-anchor="middle" class="hanko__char">T</text>
+        </g>
+      </defs>
+    </svg>
 
-  <script src="script.js"></script>
-</body>
+    <script src="/Front-end/script.js"></script>
+  </body>
 </html>
