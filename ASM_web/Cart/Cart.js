@@ -374,7 +374,7 @@ document
     }
 
     // Redirect to menu
-    window.location.href = "/ASM_web/ASM_web/ASM_web/Menu/Menu.html";
+    window.location.href = "../Menu/Menu.html";
   });
 
 // Mobile menu functionality
