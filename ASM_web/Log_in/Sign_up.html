@@ -92,19 +92,17 @@
         <button
           type="button"
           class="btn btn-login"
-          onclick="alert('Chuyển đến trang đăng nhập')"
+          onclick="
+            alert('Chuyển đến trang đăng nhập');
+            window.location.href = 'Log_in.html';
+          "
         >
           Đăng Nhập
         </button>
 
         <div class="login-link">
           Đã có tài khoản?
-          <a
-            href="Log_in.html"
-            onclick="
-              alert('Chuyển đến trang đăng nhập');
-              return false;
-            "
+          <a href="Log_in.html" onclick="alert('Chuyển đến trang đăng nhập')"
             >Đăng nhập ngay</a
           >
           <a href="Log_in.html" class="login-link-btn">Đăng nhập</a>
