@@ -1,0 +1,604 @@
+/* ===============================
+   Design tokens (kế thừa từ trang chính)
+   =============================== */
+
+:root {
+  --paper: #f5f4ef;
+  --paper-deep: #eeece4;
+  --ink: #171613;
+  --sumi: #6e6a62;
+  --shu: #be3327;
+  --shu-deep: #93261c;
+  --line: #ded9cd;
+  --wash: rgba(190, 51, 39, 0.05);
+  --code-bg: #1c1a16;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-jp: "Shippori Mincho", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--shu);
+  color: var(--paper);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--shu);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ===============================
+   Background
+   =============================== */
+
+.grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(#e7e4da 1px, transparent 1px),
+    linear-gradient(90deg, #e7e4da 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.4;
+  z-index: -3;
+}
+
+.circle {
+  position: fixed;
+  border-radius: 50%;
+  background: var(--wash);
+  z-index: -2;
+}
+
+.circle1 {
+  width: 380px;
+  height: 380px;
+  right: -120px;
+  top: 120px;
+}
+
+.circle2 {
+  width: 260px;
+  height: 260px;
+  left: -80px;
+  bottom: 80px;
+}
+
+/* ===============================
+   Hanko
+   =============================== */
+
+.hanko {
+  display: block;
+  overflow: visible;
+}
+
+.hanko__char {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  fill: var(--shu);
+}
+
+.hanko--mini {
+  width: 22px;
+  height: 22px;
+}
+
+.hanko--sm {
+  width: 32px;
+  height: 32px;
+}
+
+/* ===============================
+   Utility
+   =============================== */
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sumi);
+  margin-bottom: 18px;
+}
+
+.line {
+  width: 90px;
+  height: 3px;
+  background: var(--shu);
+  margin: 32px 0;
+}
+
+/* ===============================
+   Navigation
+   =============================== */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 8%;
+  position: fixed;
+  background: rgba(245, 244, 239, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--sumi);
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: var(--shu);
+}
+
+.back-link .arrow {
+  transition: transform 0.3s;
+}
+
+.back-link:hover .arrow {
+  transform: translateX(-4px);
+}
+
+/* ===============================
+   Hero
+   =============================== */
+
+.hero {
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 150px 8% 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.hero__index {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--shu);
+  border: 1px solid var(--line);
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  max-width: 900px;
+}
+
+.hero__role {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--sumi);
+}
+
+.hero__desc {
+  max-width: 620px;
+  color: var(--sumi);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.hero__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  color: var(--sumi);
+  background: var(--paper);
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.chip:hover {
+  border-color: var(--shu-deep);
+  color: var(--ink);
+}
+
+.hero__links {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: all 0.3s;
+}
+
+.btn--primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn--primary:hover {
+  background: var(--shu);
+}
+
+.btn--ghost {
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--ink);
+}
+
+/* ===============================
+   Section shell
+   =============================== */
+
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 8%;
+}
+
+.section__head {
+  margin-bottom: 40px;
+}
+
+.section__head h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ===============================
+   Architecture / feature list
+   =============================== */
+
+.arch {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.arch-card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--line);
+  padding: 30px 26px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    border-color 0.3s ease;
+}
+
+.arch-card:hover {
+  border-top-color: var(--shu);
+}
+
+.arch-card .num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--shu);
+}
+
+.arch-card h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 14px 0 10px;
+}
+
+.arch-card p {
+  font-size: 14px;
+  color: var(--sumi);
+  line-height: 1.75;
+}
+
+.arch-card ul {
+  margin-top: 14px;
+  padding-left: 18px;
+  color: var(--sumi);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* ===============================
+   Gallery — 4 hình showcase
+   =============================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.gallery-item figure {
+  margin: 0;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: grayscale(15%);
+  transition:
+    filter 0.4s ease,
+    transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+.gallery-item figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.gallery-item figcaption .cap-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.gallery-item figcaption .cap-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--sumi);
+}
+
+/* ===============================
+   Endpoint table
+   =============================== */
+
+.endpoints {
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.endpoint-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 2fr;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+  font-size: 13px;
+}
+
+.endpoint-row:last-child {
+  border-bottom: none;
+}
+
+.endpoint-row.head {
+  background: var(--paper-deep);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sumi);
+}
+
+.method {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  padding: 3px 8px;
+  width: fit-content;
+}
+
+.method.get {
+  color: #1d6e42;
+  border: 1px solid #b9dcc4;
+}
+.method.post {
+  color: var(--shu-deep);
+  border: 1px solid #f0c3bd;
+}
+.method.put {
+  color: #8a6a00;
+  border: 1px solid #eadb9c;
+}
+.method.delete {
+  color: #8a2020;
+  border: 1px solid #f0bcbc;
+}
+
+.endpoint-row code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink);
+}
+
+.endpoint-row .desc {
+  color: var(--sumi);
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+footer {
+  padding: 70px 8%;
+  border-top: 1px solid var(--line);
+  color: var(--sumi);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer__mark {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__mark .hanko--sm {
+  transform: rotate(-5deg);
+}
+
+.footer__mark p {
+  font-size: 14px;
+}
+
+.footer__mark strong {
+  color: var(--ink);
+}
+
+.footer__copy {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+
+@media (max-width: 1000px) {
+  .arch {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero__title {
+    font-size: 40px;
+  }
+  .endpoint-row {
+    grid-template-columns: 70px 1fr;
+  }
+  .endpoint-row .desc {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 130px 6% 50px;
+  }
+  .hero__title {
+    font-size: 32px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ===============================
+   Reduced motion
+   =============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

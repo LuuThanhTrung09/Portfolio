@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back-end / Game106 API | Lưu Thành Trung</title>
+    <meta
+      name="description"
+      content="Game106 API — ASP.NET Core Web API quản lý tài khoản và nhân vật game, kèm Admin Panel MVC và xác thực email."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Hanko mark, reused from trang chính -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <g id="hanko-mark">
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="none"
+            stroke="var(--shu)"
+            stroke-width="3"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="38"
+            fill="none"
+            stroke="var(--shu)"
+            stroke-width="1"
+          />
+          <text x="50" y="35" text-anchor="middle" class="hanko__char">L</text>
+          <text x="50" y="59" text-anchor="middle" class="hanko__char">T</text>
+          <text x="50" y="83" text-anchor="middle" class="hanko__char">T</text>
+          <circle cx="19" cy="21" r="1.4" fill="var(--shu)" opacity=".55" />
+          <circle cx="83" cy="29" r="1" fill="var(--shu)" opacity=".4" />
+          <circle cx="79" cy="76" r="1.6" fill="var(--shu)" opacity=".5" />
+          <circle cx="15" cy="71" r="1.1" fill="var(--shu)" opacity=".45" />
+          <circle cx="52" cy="10" r=".9" fill="var(--shu)" opacity=".4" />
+        </g>
+      </defs>
+    </svg>
+
+    <!-- Background -->
+    <div class="grid"></div>
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="../index.html#top" class="logo">
+        <svg class="hanko hanko--mini" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#hanko-mark" />
+        </svg>
+        LTT
+      </a>
+
+      <a href="../index.html#selection" class="back-link">
+        <span class="arrow">←</span> Quay lại Portfolio
+      </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <span class="hero__index">03 / Back-end</span>
+      <h1 class="hero__title">
+        GAME ACCOUNT MANAGEMENT SYSTEM — ASP.NET Core Web API
+      </h1>
+      <p class="hero__role">
+        ASP.NET Core Web API · Entity Framework Core · SQL Server
+      </p>
+
+      <div class="line"></div>
+
+      <p class="hero__desc">
+        Hệ thống backend cho một game quản lý tài khoản &amp; nhân vật người
+        chơi. Xây dựng theo kiến trúc phân lớp Controller – Service – DbContext,
+        cung cấp REST API cho client (Unity) và một Admin Panel (MVC + Razor
+        Views) riêng để quản trị dữ liệu qua trình duyệt.
+      </p>
+
+      <div class="hero__stack">
+        <span class="chip">C# / .NET</span>
+        <span class="chip">ASP.NET Core Web API</span>
+        <span class="chip">Entity Framework Core</span>
+        <span class="chip">SQL Server</span>
+        <span class="chip">MVC + Razor</span>
+        <span class="chip">MailKit</span>
+        <span class="chip">HMACSHA512</span>
+      </div>
+
+      <div class="hero__links">
+        <a
+          href="https://github.com/LuuThanhTrung09"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--primary"
+        >
+          Xem code trên GitHub
+        </a>
+        <a href="#gallery" class="btn btn--ghost">Xem hình ảnh dự án</a>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture">
+      <div class="section__head">
+        <span class="eyebrow">Architecture</span>
+        <h2>Cách hệ thống được tổ chức</h2>
+      </div>
+
+      <div class="arch">
+        <div class="arch-card">
+          <span class="num">01</span>
+          <h3>Kiến trúc phân lớp</h3>
+          <p>
+            Controller chỉ nhận request và trả response chuẩn hoá qua
+            <code>ResponseApi</code>. Toàn bộ logic nghiệp vụ và truy vấn nằm ở
+            Service, giao tiếp DB qua <code>AppDbContext</code> (EF Core).
+          </p>
+          <ul>
+            <li>AccountsController / CharacterController</li>
+            <li>IAccountServices / ICharacterServices</li>
+            <li>AppDbContext : DbContext</li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <span class="num">02</span>
+          <h3>Bảo mật &amp; xác thực</h3>
+          <p>
+            Mật khẩu không lưu plaintext — băm bằng HMACSHA512 với salt riêng
+            cho từng tài khoản, xác minh lại khi đăng nhập.
+          </p>
+          <ul>
+            <li>PasswordHasher (hash + salt)</li>
+            <li>Đăng ký gửi email xác nhận qua MailKit</li>
+            <li>Template email HTML riêng</li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <span class="num">03</span>
+          <h3>Admin Panel (MVC)</h3>
+          <p>
+            Ngoài REST API cho client, hệ thống có một trang quản trị dựng bằng
+            MVC + Razor View để xem và quản lý tài khoản, nhân vật trực tiếp
+            trên trình duyệt.
+          </p>
+          <ul>
+            <li>Đăng nhập / Đăng ký admin</li>
+            <li>Danh sách Account &amp; Character</li>
+            <li>Giao diện tách riêng khỏi API layer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="section__head">
+        <span class="eyebrow">Showcase</span>
+        <h2>Hình ảnh dự án</h2>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <figure>
+            <img
+              src="images/screenshot-1.png"
+              alt="Admin Dashboard - trang tổng quan quản trị"
+              loading="lazy"
+            />
+            <figcaption>
+              <span class="cap-title">Admin Dashboard</span>
+              <span class="cap-index">01</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery-item">
+          <figure>
+            <img
+              src="images/screenshot-2.png"
+              alt="Danh sách tài khoản người chơi"
+              loading="lazy"
+            />
+            <figcaption>
+              <span class="cap-title">Danh sách Account</span>
+              <span class="cap-index">02</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery-item">
+          <figure>
+            <img
+              src="images/screenshot-3.png"
+              alt="Danh sách nhân vật trong game"
+              loading="lazy"
+            />
+            <figcaption>
+              <span class="cap-title">Danh sách Character</span>
+              <span class="cap-index">03</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery-item">
+          <figure>
+            <img
+              src="images/screenshot-4.png"
+              alt="Kết quả gọi API qua Postman hoặc Swagger"
+              loading="lazy"
+            />
+            <figcaption>
+              <span class="cap-title">API Response (Postman)</span>
+              <span class="cap-index">04</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Endpoints -->
+    <section id="endpoints">
+      <div class="section__head">
+        <span class="eyebrow">API Reference</span>
+        <h2>Một số endpoint tiêu biểu</h2>
+      </div>
+
+      <div class="endpoints">
+        <div class="endpoint-row head">
+          <span>Method</span>
+          <span>Route</span>
+          <span>Mô tả</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method post">POST</span>
+          <code>/api/register</code>
+          <span class="desc">Đăng ký tài khoản mới, gửi email xác nhận</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method post">POST</span>
+          <code>/api/login</code>
+          <span class="desc">Đăng nhập, xác thực mật khẩu đã băm</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method put">PUT</span>
+          <code>/api/change-password</code>
+          <span class="desc">Đổi mật khẩu theo Account Id</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method delete">DELETE</span>
+          <code>/api/accounts/{id}</code>
+          <span class="desc">Xoá tài khoản theo Id</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method get">GET</span>
+          <code>/api/get-all-charaters</code>
+          <span class="desc">Lấy toàn bộ danh sách nhân vật</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method post">POST</span>
+          <code>/api/create-new-character</code>
+          <span class="desc">Tạo nhân vật mới cho một tài khoản</span>
+        </div>
+        <div class="endpoint-row">
+          <span class="method put">PUT</span>
+          <code>/api/update-character-by-id</code>
+          <span class="desc">Cập nhật tên, level, exp của nhân vật</span>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="footer__mark">
+        <svg class="hanko hanko--sm" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#hanko-mark" />
+        </svg>
+        <p>Designed &amp; developed by <strong>Lưu Thành Trung</strong></p>
+      </div>
+      <p class="footer__copy">© <span id="year">2026</span> Lưu Thành Trung</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
