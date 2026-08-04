@@ -51,6 +51,52 @@ window.addEventListener("scroll", () => {
 });
 
 // ===============================
+// Lightbox — phóng to ảnh khi click
+// ===============================
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxClose = document.getElementById("lightboxClose");
+
+function openLightbox(src, caption) {
+  lightboxImg.src = src;
+  lightboxImg.alt = caption || "";
+  lightboxCaption.textContent = caption || "";
+  lightbox.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("is-open");
+  document.body.style.overflow = "";
+  lightboxImg.src = "";
+}
+
+document.querySelectorAll(".lightbox-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", (e) => {
+    e.preventDefault();
+    openLightbox(trigger.getAttribute("href"), trigger.dataset.caption);
+  });
+});
+
+if (lightboxClose) {
+  lightboxClose.addEventListener("click", closeLightbox);
+}
+
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+    closeLightbox();
+  }
+});
+
+// ===============================
 // Năm footer tự động
 // ===============================
 

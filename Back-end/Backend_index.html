@@ -177,11 +177,17 @@
       <div class="gallery">
         <div class="gallery-item">
           <figure>
-            <img
-              src="../Pic/Back-end/dashboard.png"
-              alt="Admin Dashboard - trang tổng quan quản trị"
-              loading="lazy"
-            />
+            <a
+              href="../Pic/Back-end/dashboard.png"
+              class="lightbox-trigger"
+              data-caption="Admin Dashboard"
+            >
+              <img
+                src="../Pic/Back-end/dashboard.png"
+                alt="Admin Dashboard - trang tổng quan quản trị"
+                loading="lazy"
+              />
+            </a>
             <figcaption>
               <span class="cap-title">Admin Dashboard</span>
               <span class="cap-index">01</span>
@@ -191,11 +197,17 @@
 
         <div class="gallery-item">
           <figure>
-            <img
-              src="../Pic/Back-end/account.png"
-              alt="Danh sách tài khoản người chơi"
-              loading="lazy"
-            />
+            <a
+              href="../Pic/Back-end/account.png"
+              class="lightbox-trigger"
+              data-caption="Danh sách Account"
+            >
+              <img
+                src="../Pic/Back-end/account.png"
+                alt="Danh sách tài khoản người chơi"
+                loading="lazy"
+              />
+            </a>
             <figcaption>
               <span class="cap-title">Danh sách Account</span>
               <span class="cap-index">02</span>
@@ -205,11 +217,17 @@
 
         <div class="gallery-item">
           <figure>
-            <img
-              src="../Pic/Back-end/Nhân vật.png"
-              alt="Danh sách nhân vật trong game"
-              loading="lazy"
-            />
+            <a
+              href="../Pic/Back-end/Nhân vật.png"
+              class="lightbox-trigger"
+              data-caption="Danh sách Character"
+            >
+              <img
+                src="../Pic/Back-end/Nhân vật.png"
+                alt="Danh sách nhân vật trong game"
+                loading="lazy"
+              />
+            </a>
             <figcaption>
               <span class="cap-title">Danh sách Character</span>
               <span class="cap-index">03</span>
@@ -219,11 +237,17 @@
 
         <div class="gallery-item">
           <figure>
-            <img
-              src="../Pic/Back-end/Screenshot 2026-08-01 131815.png"
-              alt="Kết quả gọi API qua Postman hoặc Swagger"
-              loading="lazy"
-            />
+            <a
+              href="../Pic/Back-end/Screenshot 2026-08-01 131815.png"
+              class="lightbox-trigger"
+              data-caption="API Response (Postman)"
+            >
+              <img
+                src="../Pic/Back-end/Screenshot 2026-08-01 131815.png"
+                alt="Kết quả gọi API qua Postman hoặc Swagger"
+                loading="lazy"
+              />
+            </a>
             <figcaption>
               <span class="cap-title">API Response (Postman)</span>
               <span class="cap-index">04</span>
@@ -293,6 +317,17 @@
       </div>
       <p class="footer__copy">© <span id="year">2026</span> Lưu Thành Trung</p>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Đóng">
+        ✕
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+        <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+      </figure>
+    </div>
 
     <script src="script.js"></script>
   </body>
